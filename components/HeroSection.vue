@@ -1,12 +1,13 @@
 <template>
+  <section class="w-full">
+    <Hero/>
+  </section>
   <section class="relative min-h-screen flex flex-col lg:flex-row">
     <!-- Левая часть: Текстовые блоки -->
     <div class="w-full lg:w-1/2 px-6 lg:px-10 py-12 flex flex-col space-y-12">
       <!-- Герой Секция -->
       <div class="block" ref="heroSection" data-section="hero">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-blue-900 mb-4">
-          {{ $t('hero.title') }}
-        </h1>
+         
         <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
           {{ $t('hero.subtitle') }}
         </h2>
@@ -109,6 +110,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
+import Hero from './Hero.vue';
 
 // Список изображений для параллакс-эффекта
 const images = [
