@@ -71,9 +71,9 @@
     </div>
   </div>
         <!-- Фотогалерея -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-          <img src="" alt="Основание Центра" class="w-full h-60 object-cover rounded-lg shadow-md">
-          <img src="" alt="Заседание Ученого Совета" class="w-full h-60 object-cover rounded-lg shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6">
+          <img src="/images/create.jpg" alt="Основание Центра" class="w-full h-96 object-cover rounded-lg shadow-md">
+          <img src="/images/senat.jpg" alt="Заседание Ученого Совета" class="w-full h-96 object-cover rounded-lg shadow-md">
         </div>
   
         <p class="text-gray-700 mb-6">
@@ -141,8 +141,8 @@
           Клиника Национального центра располагает стационаром на 80 коек, состоящим из профессиональной неврологии, профессиональной терапии и платного отделения. Консультативно-диагностическое отделение включает кабинеты различных специалистов, лаборатории и диагностические кабинеты.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <img src="" alt="Клиника Центра" class="w-full h-60 object-cover rounded-lg shadow-md">
-          <img src="" alt="Специалисты Центра" class="w-full h-60 object-cover rounded-lg shadow-md">
+          <img src="" alt="Клиника Центра" class="w-full h-80 object-cover rounded-lg shadow-md">
+          <img src="/images/staff.jpg" alt="Специалисты Центра" class="w-full h-80 object-cover rounded-lg shadow-md">
         </div>
         <p class="text-gray-700 mt-6">
           В 2013 году был открыт аллергологический центр, оказывающий стационарзамещающую медицинскую помощь и консультативно-диагностическую помощь населению Караганды и Карагандинской области.
@@ -207,10 +207,10 @@
         <p class="text-gray-700 mb-6">
           Центр активно сотрудничает с научными учреждениями различных стран, участвует в международных программах и конференциях, проводит мастер-классы с зарубежными экспертами.
         </p>
-        <div class="flex flex-wrap gap-6">
-          <img src="" alt="Партнер Франции" class="w-24 h-24 object-contain">
-          <img src="" alt="Партнер Бельгии" class="w-24 h-24 object-contain">
-          <img src="" alt="Партнер США" class="w-24 h-24 object-contain">
+        <div class="flex flex-wrap gap-1">
+          <img src="/images/fr.jpg" alt="Партнер Франции" class="w-80 h-80 object-contain">
+          <img src="/images/bg.jpg" alt="Партнер Бельгии" class="w-80 h-80 object-contain">
+          <img src="/images/usa.jpg" alt="Партнер США" class="w-80 h-80 object-contain">
           <!-- Добавьте логотипы других партнеров аналогично -->
         </div>
         <p class="text-gray-700 mt-6">
@@ -265,47 +265,47 @@
   {
     name: 'З.К. Тулегенов',
     period: '1958–1970 гг.',
-    image: '/images/leaders/tulegenov.jpg',
+    image: '/images/tylegenov.jpg',
   },
   {
     name: 'А.П. Филин',
     period: '1970–1974 гг.',
-    image: '/images/leaders/filin.jpg',
+    image: '/images/filin.jpg',
   },
   {
     name: 'Б.Е. Алтынбеков',
     period: '1974–1991 гг.',
-    image: '/images/leaders/altynbekov.jpg',
+    image: '/images/altynbekov.jpg',
   },
   {
     name: 'Г.А. Кулкыбаев',
     period: '1991–2006 гг.',
-    image: '/images/leaders/kulkyaev.jpg',
+    image: '/images/kulkyaev.jpg',
   },
   {
     name: 'С.А. Ибраев',
     period: '2006–2007 гг.',
-    image: '/images/leaders/ibraev.jpg',
+    image: '/images/ibraev.jpg',
   },
   {
     name: 'Е.Н. Сраубаев',
     period: '2007-2009 гг.',
-    image: '/images/leaders/sraubayev.jpg',
+    image: '/images/sraubayev.jpg',
   },
   {
     name: 'Ж.Е. Баттакова',
     period: '2009г.-2011г.',
-    image: '/images/leaders/battakova.jpg',
+    image: '/images/battakova.jpg',
   },
   {
     name: 'И.А. Аманжол',
     period: '2011-2013 гг.',
-    image: '/images/leaders/amanzhol.jpg',
+    image: '/images/amanzhol.jpg',
   },
   {
     name: 'К.З.Сакиев',
     period: '2013-2017гг.',
-    image: '/images/leaders/sakiyev.jpg',
+    image: '/images/sakiyev.jpg',
   },
   {
     name: 'Хамитов Т.Н.',

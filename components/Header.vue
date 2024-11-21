@@ -145,15 +145,13 @@
       title: 'clinics',
       submenu: [
         { title: 'main_clinic', url: '/clinics/main' },
-        { title: 'dental_clinic', url: '/clinics/dental' },
       ],
     },
     {
       title: 'education',
       submenu: [
         { title: 'programs', url: '/education/programs' },
-        { title: 'library', url: '/education/library' },
-        { title: 'scholarships', url: '/education/scholarships' },
+
       ],
     },
     {

@@ -18,8 +18,8 @@
             <li><NuxtLink to="/about" class="hover:underline">{{ $t('menu.about') }}</NuxtLink></li>
             <li><NuxtLink to="/science" class="hover:underline">{{ $t('menu.science') }}</NuxtLink></li>
             <li><NuxtLink to="/clinics" class="hover:underline">{{ $t('menu.clinics') }}</NuxtLink></li>
-            <li><NuxtLink to="/education" class="hover:underline">{{ $t('menu.education') }}</NuxtLink></li>
-            <li><NuxtLink to="/contacts" class="hover:underline">{{ $t('menu.contacts') }}</NuxtLink></li>
+            <li><NuxtLink to="/education/programs" class="hover:underline">{{ $t('menu.education') }}</NuxtLink></li>
+            <li><NuxtLink to="/contacts/contact-us" class="hover:underline">{{ $t('menu.contacts') }}</NuxtLink></li>
             <li><NuxtLink to="/goszakupki" class="hover:underline">{{ $t('menu.goszakupki') }}</NuxtLink></li>
             <li><NuxtLink to="/biblioteka" class="hover:underline">{{ $t('menu.biblioteka') }}</NuxtLink></li>
           </ul>
@@ -29,8 +29,8 @@
         <div>
           <h3 class="text-lg font-semibold mb-4">{{ $t('footer.contact_info') }}</h3>
           <ul class="space-y-2">
-            <li>{{ $t('footer.address') }}: ул. Абая, 123, Астана, Казахстан</li>
-            <li>{{ $t('footer.phone') }}: +7 (7172) 123-456</li>
+            <li>{{ $t('footer.address') }}: Караганда,  ул. Мустафина 15, Казахстан</li>
+            <li>{{ $t('footer.phone') }}: +7 (7212) 56 52 63; +7 (7212) 56 53 10</li>
             <li>{{ $t('footer.email') }}: info@hygiene.kz</li>
           </ul>
           <div class="flex space-x-4 mt-4">
