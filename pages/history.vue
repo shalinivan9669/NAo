@@ -142,7 +142,7 @@
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <img src="" alt="Клиника Центра" class="w-full h-80 object-cover rounded-lg shadow-md">
-          <img src="/images/staff.jpg" alt="Специалисты нашего Центра" class="w-full h-80 object-cover rounded-lg shadow-md">
+          <img src="/images/sta.jpg" alt="Специалисты нашего Центра" class="w-full h-80 object-cover rounded-lg shadow-md">
         </div>
         <p class="text-gray-800 mt-6">
           В 2013 году был открыт аллергологический центр, оказывающий стационарзамещающую медицинскую помощь и консультативно-диагностическую помощь населению Караганды и Карагандинской области.
