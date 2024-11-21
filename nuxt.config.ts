@@ -8,7 +8,9 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-
+  plugins: [
+    { src: '~/plugins/vue-echarts.js', mode: 'client' }
+  ],
   modules: ['@nuxtjs/i18n'],
   i18n: {
     vueI18n: './i18n.config.ts', // Путь к файлу конфигурации
@@ -21,4 +23,7 @@ export default defineNuxtConfig({
       redirectOn: 'root',
     },
   },
+  build: {
+    transpile: ['vue-echarts', 'resize-detector']
+  }
 });

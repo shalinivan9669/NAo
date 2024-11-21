@@ -1,6 +1,6 @@
 <!-- components/Header.vue -->
 <template>
-  <header class="bg-white shadow-md border-b border-gray-200">
+  <header class="bg-white shadow-md border-b border-gray-200 relative z-20">
     <nav class="container mx-auto px-6 py-4">
       <!-- Верхняя часть навигации: Логотип и название -->
       <div class="flex flex-col md:flex-row md:justify-between md:items-center">
