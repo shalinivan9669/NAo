@@ -8,10 +8,14 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+
   plugins: [
-    { src: '~/plugins/vue-echarts.js', mode: 'client' }
+    { src: '~/plugins/vue-echarts.js', mode: 'client' },
+    { src: '~/plugins/vuex.ts' }, // Убедитесь, что этот плагин подключён
   ],
+
   modules: ['@nuxtjs/i18n'],
+
   i18n: {
     vueI18n: './i18n.config.ts', // Путь к файлу конфигурации
     locales: ['kk', 'ru', 'en'],
@@ -23,7 +27,10 @@ export default defineNuxtConfig({
       redirectOn: 'root',
     },
   },
+
   build: {
     transpile: ['vue-echarts', 'resize-detector']
-  }
+  },
+
+  compatibilityDate: '2024-11-27'
 });
