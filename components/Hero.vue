@@ -26,12 +26,7 @@
           <p class="text-lg md:text-xl lg:text-2xl text-white mb-6">
             {{ $t('hero.subtitle') }}
           </p>
-          <router-link
-            to="/contact"
-            class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300"
-          >
-            {{ $t('hero.cta') }}
-          </router-link>
+        
         </div>
       </div>
   

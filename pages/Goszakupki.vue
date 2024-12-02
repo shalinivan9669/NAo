@@ -4,31 +4,43 @@
     <h1 class="text-3xl font-bold mb-6">Список Закупок</h1>
     
     <!-- Таблица закупок -->
-    <table class="min-w-full bg-white">
-      <thead>
-        <tr>
-          <th class="py-2 px-4 border-b">№</th>
-          <th class="py-2 px-4 border-b">Название</th>
-          <th class="py-2 px-4 border-b">Описание</th>
-          <th class="py-2 px-4 border-b">Дата Создания</th>
-          <th class="py-2 px-4 border-b">Дата Окончания</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr
-          v-for="(procurement, index) in procurements"
-          :key="procurement.id"
-          class="hover:bg-gray-100 cursor-pointer"
-          @click="openDetails(procurement)"
-        >
-          <td class="py-2 px-4 border-b">{{ (currentPage - 1) * limit + index + 1 }}</td>
-          <td class="py-2 px-4 border-b">{{ procurement.title }}</td>
-          <td class="py-2 px-4 border-b truncate-description">{{ procurement.description }}</td>
-          <td class="py-2 px-4 border-b">{{ formatDate(procurement.createdAt) }}</td>
-          <td class="py-2 px-4 border-b">{{ formatDate(procurement.endDate) }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white border">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="py-2 px-4 border-b text-left">№</th>
+            <th class="py-2 px-4 border-b text-left">Название</th>
+            <th class="py-2 px-4 border-b text-left">Описание</th>
+            <th class="py-2 px-4 border-b text-left">Дата Создания</th>
+            <th class="py-2 px-4 border-b text-left">Дата Окончания</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            v-for="(procurement, index) in procurements"
+            :key="procurement.id"
+            class="hover:bg-gray-100 cursor-pointer"
+            @click="openDetails(procurement)"
+          >
+            <td class="py-2 px-4 border-b">{{ (currentPage - 1) * limit + index + 1 }}</td>
+            <td
+              class="py-2 px-4 border-b max-w-xs truncate-with-ellipsis"
+              :title="procurement.title"
+            >
+              {{ procurement.title }}
+            </td>
+            <td
+              class="py-2 px-4 border-b max-w-md truncate-with-ellipsis"
+              :title="procurement.description"
+            >
+              {{ procurement.description }}
+            </td>
+            <td class="py-2 px-4 border-b">{{ formatDate(procurement.createdAt) }}</td>
+            <td class="py-2 px-4 border-b">{{ formatDate(procurement.endDate) }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <!-- Пагинация -->
     <div class="flex justify-center mt-6">
@@ -51,9 +63,9 @@
 
     <!-- Модальное окно для детального просмотра -->
     <div v-if="selectedProcurement" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div class="bg-white p-6 rounded shadow-lg w-full max-w-2xl mx-4">
+      <div class="bg-white p-6 rounded shadow-lg w-full max-w-3xl mx-4 max-h-screen overflow-y-auto">
         <div class="flex justify-between items-center mb-4">
-          <h2 class="text-2xl font-bold">{{ selectedProcurement.title }}</h2>
+          <h2 class="text-2xl font-bold main-title">{{ selectedProcurement.title }}</h2>
           <button @click="closeDetails()" class="text-gray-500 hover:text-gray-700">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                  viewBox="0 0 24 24" stroke="currentColor">
@@ -62,20 +74,35 @@
             </svg>
           </button>
         </div>
-        <p class="mb-4">{{ selectedProcurement.description }}</p>
-        <div class="mb-4">
-          <p><strong>Дата создания:</strong> {{ formatDate(selectedProcurement.createdAt) }}</p>
-          <p><strong>Дата окончания:</strong> {{ formatDate(selectedProcurement.endDate) }}</p>
+        <div class="space-y-4">
+          <div>
+            <p class="text-gray-700">{{ selectedProcurement.description }}</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <p class="font-semibold">Дата создания:</p>
+              <p>{{ formatDate(selectedProcurement.createdAt) }}</p>
+            </div>
+            <div>
+              <p class="font-semibold">Дата окончания:</p>
+              <p>{{ formatDate(selectedProcurement.endDate) }}</p>
+            </div>
+          </div>
+          <div v-if="selectedProcurement.fileUrls && selectedProcurement.fileUrls.length > 0">
+            <p class="font-semibold">Прикрепленные файлы:</p>
+            <ul class="list-disc list-inside">
+              <li v-for="(fileUrl, index) in selectedProcurement.fileUrls" :key="index">
+                <a :href="fileUrl" target="_blank" class="text-blue-600 hover:underline">
+                  Файл {{ index + 1 }}
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div v-if="selectedProcurement.fileUrls && selectedProcurement.fileUrls.length > 0">
-          <p class="font-semibold mb-2">Прикрепленные файлы:</p>
-          <ul>
-            <li v-for="(fileUrl, index) in selectedProcurement.fileUrls" :key="index">
-              <a :href="fileUrl" target="_blank" class="text-blue-600 hover:underline">
-                Файл {{ index + 1 }}
-              </a>
-            </li>
-          </ul>
+        <div class="mt-6 flex justify-end">
+          <button @click="closeDetails()" class="px-4 py-2 rounded bg-gray-300 hover:bg-gray-400 transition">
+            Закрыть
+          </button>
         </div>
       </div>
     </div>
@@ -188,6 +215,21 @@ onMounted(() => {
   cursor: pointer;
 }
 
+/* Новые стили для управления текстом и столбцами */
+.truncate-with-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.max-w-xs {
+  max-width: 10rem; /* Максимальная ширина для столбца "Название" */
+}
+
+.max-w-md {
+  max-width: 20rem; /* Максимальная ширина для столбца "Описание" */
+}
+
 .fixed {
   position: fixed;
 }
@@ -207,8 +249,8 @@ onMounted(() => {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.max-w-2xl {
-  max-width: 42rem;
+.max-w-3xl {
+  max-width: 48rem;
 }
 
 .mx-4 {
@@ -216,27 +258,63 @@ onMounted(() => {
   margin-right: 1rem;
 }
 
-.text-gray-500 {
-  color: #6b7280;
+.max-h-screen {
+  max-height: 100vh;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.space-y-4 > :not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 640px) {
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
+.list-inside {
+  list-style-position: inside;
 }
 
 .text-gray-700 {
-  color: #374151;
+  color: #4a5568;
+}
+
+.text-gray-500 {
+  color: #a0aec0;
 }
 
 .hover\:text-gray-700:hover {
-  color: #374151;
+  color: #4a5568;
 }
 
 .font-semibold {
   font-weight: 600;
 }
-
-.truncate-description {
-  display: -webkit-box;
-  -webkit-line-clamp: 1; /* Показываем только одну строку */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  height: 90px;
+.main-title{
+  width: 99%;
+  white-space: pre-line;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 </style>

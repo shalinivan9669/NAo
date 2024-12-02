@@ -7,31 +7,43 @@
     </button>
     
     <!-- Таблица закупок -->
-    <table class="min-w-full bg-white">
-      <thead>
-        <tr>
-          <th class="py-2 px-4 border-b">№</th>
-          <th class="py-2 px-4 border-b">Название</th>
-          <th class="py-2 px-4 border-b">Описание</th>
-          <th class="py-2 px-4 border-b">Дата Создания</th>
-          <th class="py-2 px-4 border-b">Дата Окончания</th>
-          <th class="py-2 px-4 border-b">Действия</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(procurement, index) in procurements" :key="procurement.id" class="hover:bg-gray-100">
-          <td class="py-2 px-4 border-b">{{ (currentPage - 1) * limit + index + 1 }}</td>
-          <td class="py-2 px-4 border-b">{{ procurement.title }}</td>
-          <td class="py-2 px-4 border-b">{{ procurement.description }}</td>
-          <td class="py-2 px-4 border-b">{{ formatDate(procurement.createdAt) }}</td>
-          <td class="py-2 px-4 border-b">{{ formatDate(procurement.endDate) }}</td>
-          <td class="py-2 px-4 border-b">
-            <button @click="openEditModal(procurement)" class="text-blue-600 hover:underline mr-2">Редактировать</button>
-            <button @click="confirmDelete(procurement.id)" class="text-red-600 hover:underline">Удалить</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white border">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="py-2 px-4 border-b text-left w-16">№</th>
+            <th class="py-2 px-4 border-b text-left">Название</th>
+            <th class="py-2 px-4 border-b text-left">Описание</th>
+            <th class="py-2 px-4 border-b text-left w-48">Дата Создания</th>
+            <th class="py-2 px-4 border-b text-left w-48">Дата Окончания</th>
+            <th class="py-2 px-4 border-b text-left w-32">Действия</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(procurement, index) in procurements" :key="procurement.id" class="hover:bg-gray-100">
+            <td class="py-2 px-4 border-b">{{ (currentPage - 1) * limit + index + 1 }}</td>
+            <td
+              class="py-2 px-4 border-b max-w-xs truncate-with-ellipsis"
+              :title="procurement.title"
+            >
+              {{ procurement.title }}
+            </td>
+            <td
+              class="py-2 px-4 border-b max-w-md truncate-multiline"
+              :title="procurement.description"
+            >
+              {{ procurement.description }}
+            </td>
+            <td class="py-2 px-4 border-b">{{ formatDate(procurement.createdAt) }}</td>
+            <td class="py-2 px-4 border-b">{{ formatDate(procurement.endDate) }}</td>
+            <td class="py-2 px-4 border-b">
+              <button @click="openEditModal(procurement)" class="text-blue-600 hover:underline mr-2">Редактировать</button>
+              <button @click="confirmDelete(procurement.id)" class="text-red-600 hover:underline">Удалить</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <!-- Пагинация -->
     <div class="flex justify-center mt-6">
@@ -53,8 +65,8 @@
     </div>
 
     <!-- Модальное окно для создания и редактирования закупки -->
-    <div v-if="isModalOpen" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div class="bg-white p-6 rounded shadow-lg w-full max-w-lg mx-4">
+    <div v-if="isModalOpen" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+      <div class="bg-white p-6 rounded shadow-lg w-full max-w-lg mx-4 max-h-screen overflow-y-auto">
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-xl font-bold">{{ isEditing ? 'Редактировать Закупку' : 'Добавить Закупку' }}</h2>
           <button @click="closeModal" class="text-gray-500 hover:text-gray-700">
@@ -139,7 +151,7 @@
     </div>
 
     <!-- Подтверждение удаления -->
-    <div v-if="isDeleteConfirmOpen" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+    <div v-if="isDeleteConfirmOpen" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
       <div class="bg-white p-6 rounded shadow-lg w-80">
         <h2 class="text-xl font-bold mb-4">Подтверждение удаления</h2>
         <p class="mb-6">Вы уверены, что хотите удалить эту закупку?</p>
@@ -430,6 +442,14 @@ onMounted(() => {
   margin-right: 1rem;
 }
 
+.max-h-screen {
+  max-height: 100vh;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
 .text-gray-500 {
   color: #6b7280;
 }
@@ -440,5 +460,44 @@ onMounted(() => {
 
 .hover\:text-gray-700:hover {
   color: #374151;
+}
+
+/* Новые стили для управления текстом и столбцами */
+.truncate-with-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.truncate-multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Показываем только две строки */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.max-w-xs {
+  max-width: 10rem; /* Максимальная ширина для столбца "Название" */
+  height: 6em;
+}
+
+.max-w-md {
+  max-width: 20rem; /* Максимальная ширина для столбца "Описание" */
+  height: 6rem;
+}
+
+.w-16 {
+  width: 4rem; /* Фиксированная ширина для столбца "№" */
+  height: 6rem;
+}
+
+.w-32 {
+  width: 8rem; /* Фиксированная ширина для столбца "Действия" */
+  height: 6rem;
+}
+
+.w-48 {
+  width: 12rem; /* Фиксированная ширина для столбцов с датами */
+  height: 6rem;
 }
 </style>

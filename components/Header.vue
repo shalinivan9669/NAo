@@ -4,11 +4,11 @@
     <nav class="container mx-auto px-6 py-4">
       <!-- Верхняя часть навигации: Логотип и название -->
       <div class="flex flex-col md:flex-row md:justify-between md:items-center">
-        <!-- Логотип и название -->
-        <div class="flex items-center space-x-2 mb-4 md:mb-0">
-          <img src=" " alt="Логотип" class="h-10 w-10" />
+        <!-- Логотип и название как ссылка на главную страницу -->
+        <router-link to="/" class="flex items-center space-x-2 mb-4 md:mb-0">
+          <img src="/logo.png" alt="Логотип" class="h-24 w-24" />
           <h1 class="text-2xl font-semibold text-gray-800">{{ $t('title') }}</h1>
-        </div>
+        </router-link>
 
         <!-- Языковая панель -->
         <div class="flex space-x-4 mb-4 md:mb-0">
@@ -48,7 +48,11 @@
             </button>
             <!-- Подменю -->
             <ul class="absolute left-0 top-full mt-2 w-56 bg-white shadow-lg rounded-md border border-gray-200 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <li v-for="subItem in item.submenu" :key="subItem.title" class="px-4 py-2 hover:bg-blue-50 text-gray-700 transition duration-200 capitalize">
+              <li
+                v-for="subItem in item.submenu"
+                :key="subItem.title"
+                class="px-4 py-2 hover:bg-blue-50 text-gray-700 transition duration-200 capitalize"
+              >
                 <router-link :to="subItem.url" class="block">
                   {{ $t(`menu.${subItem.title}`) }}
                 </router-link>
@@ -89,7 +93,11 @@
               </button>
               <!-- Подменю -->
               <ul v-if="activeMobileSubmenu === item.title" class="mt-2 pl-4 space-y-2">
-                <li v-for="subItem in item.submenu" :key="subItem.title" class="text-gray-600 hover:text-blue-600 transition duration-200 capitalize">
+                <li
+                  v-for="subItem in item.submenu"
+                  :key="subItem.title"
+                  class="text-gray-600 hover:text-blue-600 transition duration-200 capitalize"
+                >
                   <router-link :to="subItem.url" class="block">
                     {{ $t(`menu.${subItem.title}`) }}
                   </router-link>
@@ -112,136 +120,137 @@
         </ul>
       </div>
     </nav>
-    </header>
-  </template>
+  </header>
+</template>
 
-  <script setup lang="ts">
-  import { ref } from 'vue';
-  import { useI18n } from 'vue-i18n';
+<script setup lang="ts">
+import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 
-  const { setLocale } = useI18n();
+// Инициализация i18n
+const { setLocale } = useI18n();
 
-  const menu = ref([
-    {
-      title: 'about',
-      submenu: [
-        { title: 'history', url: '/history' },
-        { title: 'values', url: '/values' },
-        { title: 'elders_council', url: '/elders-council' },
-        { title: 'management', url: '/management' },
-        { title: 'partners', url: '/partners' },
-      ],
-    },
-    {
-      title: 'science',
-      submenu: [
-        { title: 'research', url: '/research' },
-        { title: 'publications', url: '/publications' },
-        { title: 'conferences', url: '/conferences' },
-        { title: 'young_scientists', url: '/young-scientists' },
-      ],
-    },
-    {
-      title: 'clinics',
-      submenu: [
-        { title: 'main_clinic', url: '/clinics/main' },
-      ],
-    },
-    {
-      title: 'education',
-      submenu: [
-        { title: 'programs', url: '/education/programs' },
+// Обновленная структура меню с добавленными пунктами
+const menu = ref([
+  {
+    title: 'about',
+    submenu: [
+      { title: 'history', url: '/history' },
+      { title: 'values', url: '/values' },
+      { title: 'board_of_directors', url: '/board-of-directors' }, // Новый пункт
+      { title: 'elders_council', url: '/elders-council' },
+      { title: 'management', url: '/management' },
+      { title: 'partners', url: '/partners' },
+    ],
+  },
+  {
+    title: 'science',
+    submenu: [
+      { title: 'research', url: '/research' },
+      { title: 'publications', url: '/publications' },
+      { title: 'conferences', url: '/conferences' },
+      { title: 'young_scientists', url: '/young-scientists' },
+      { title: 'library', url: '/library' }, // Новый пункт
+    ],
+  },
+  {
+    title: 'clinics',
+    submenu: [
+      { title: 'main_clinic', url: '/clinics/main' },
+    ],
+  },
+  {
+    title: 'education',
+    submenu: [
+      { title: 'programs', url: '/education/programs' },
+      { title: 'prices', url: '/education/price' }, // Новый пункт
+    ],
+  },
+  {
+    title: 'contacts',
+    submenu: [
+      { title: 'contact_us', url: '/contacts/contact-us' },
+      { title: 'location', url: '/contacts/location' },
+    ],
+  },
+  {
+    title: 'goszakupki',
+    url: '/goszakupki',
+  },
+  {
+    title: 'biblioteka',
+    url: '/biblioteka',
+  },
+]);
 
-      ],
-    },
-    {
-      title: 'contacts',
-      submenu: [
-        { title: 'contact_us', url: '/contacts/contact-us' },
-        { title: 'location', url: '/contacts/location' },
-      ],
-    },
-    {
-      title: 'goszakupki',
-      url: '/goszakupki',
-    },
-    {
-      title: 'biblioteka',
-      url: '/biblioteka',
-    },
-  ]);
+const isMobileMenuOpen = ref<boolean>(false);
+const activeMobileSubmenu = ref<string | null>(null);
 
-  const isMobileMenuOpen = ref<boolean>(false);
-  const activeMobileSubmenu = ref<string | null>(null);
-
-  // Функции для мобильного меню
-  function toggleMobileMenu() {
-    isMobileMenuOpen.value = !isMobileMenuOpen.value;
-    if (!isMobileMenuOpen.value) {
-      activeMobileSubmenu.value = null;
-    }
+// Функции для мобильного меню
+function toggleMobileMenu() {
+  isMobileMenuOpen.value = !isMobileMenuOpen.value;
+  if (!isMobileMenuOpen.value) {
+    activeMobileSubmenu.value = null;
   }
+}
 
-  function toggleSubmenu(title: string) {
-    if (activeMobileSubmenu.value === title) {
-      activeMobileSubmenu.value = null;
-    } else {
-      activeMobileSubmenu.value = title;
-    }
+function toggleSubmenu(title: string) {
+  if (activeMobileSubmenu.value === title) {
+    activeMobileSubmenu.value = null;
+  } else {
+    activeMobileSubmenu.value = title;
   }
-  </script>
+}
+</script>
 
-  <style scoped>
-  /* Основные стили */
-  header {
-    background-color: #f9fafb;
-  }
+<style scoped>
+/* Основные стили */
+header {
+  background-color: #f9fafb;
+}
 
-  button {
-    font-family: 'Open Sans', sans-serif;
-    letter-spacing: 0.5px;
-  }
+button {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.5px;
+}
 
-  button:hover {
-    border-bottom: 2px solid #007bff;
-  }
+button:hover {
+  border-bottom: 2px solid #007bff;
+}
 
-  .shadow-lg {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  .hover\:bg-blue-50:hover {
-    background-color: #e0f2fe;
-  }
+.hover\:bg-blue-50:hover {
+  background-color: #e0f2fe;
+}
 
-  .rotate-180 {
-    transform: rotate(180deg);
-  }
+.rotate-180 {
+  transform: rotate(180deg);
+}
 
-  /* Стили для выпадающего меню */
-  .group:hover > ul {
-    opacity: 1;
-    visibility: visible;
-  }
+/* Стилизация выпадающего меню */
+.group:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
 
-  .group > ul {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-  }
+.group > ul {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
-  /* Переходы для плавного появления меню */
-  .group > ul {
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-  }
+/* Дополнительные стили для ссылок */
+.router-link,
+.router-link-active,
+.router-link-exact-active {
+  text-decoration: none;
+  color: inherit;
+}
 
-  /* Дополнительные стили для ссылок */
-  router-link {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  router-link:hover {
-    text-decoration: underline;
-  }
-  </style>
+.router-link:hover {
+  text-decoration: underline;
+}
+</style>
