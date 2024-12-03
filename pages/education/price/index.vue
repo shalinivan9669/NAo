@@ -1,115 +1,175 @@
 <!-- pages/education/price.vue -->
 <template>
-    <div class="bg-gray-50 min-h-screen">
-      <!-- Header -->
-      <header class="bg-blue-800 text-white py-6">
-        <div class="container mx-auto px-4">
-          <h1 class="text-3xl font-bold">
-            Прайс-лист на услуги обучения
-          </h1>
-          <p class="mt-2 text-lg">Обучение достойное Вашего доверия!</p>
-        </div>
-      </header>
-  
-      <!-- Main Content -->
-      <main class="container mx-auto py-10 px-4">
-        <!-- Price List -->
-        <section class="mb-12">
-          <h2 class="text-2xl font-semibold mb-4">Прайс-лист на платные услуги по обучению</h2>
+  <div class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-blue-800 text-white py-6">
+      <div class="container mx-auto px-4">
+        <h1 class="text-3xl font-bold">
+          {{ t('price.header.title') }}
+        </h1>
+        <p class="mt-2 text-lg">{{ t('price.header.subtitle') }}</p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-10 px-4">
+      <!-- Price List -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">{{ t('price.priceList.title') }}</h2>
+        <div class="overflow-x-auto">
           <table class="w-full table-auto bg-white shadow-md rounded">
             <thead>
-              <tr class="bg-gray-200">
-                <th class="px-4 py-2 text-left">№</th>
-                <th class="px-4 py-2 text-left">Наименование услуг</th>
-                <th class="px-4 py-2 text-left">Ед. изм.</th>
-                <th class="px-4 py-2 text-left">Стоимость (тенге)</th>
+              <tr>
+                <th colspan="4" class="bg-gray-200 text-left px-4 py-2 text-lg">
+                  {{ t('price.table.section1.title') }}
+                </th>
+              </tr>
+              <tr>
+                <th colspan="4" class="bg-gray-100 text-left px-4 py-2">
+                  {{ t('price.table.section1.subsection1.title') }}
+                </th>
               </tr>
             </thead>
             <tbody class="text-gray-700">
-              <tr v-for="(item, index) in priceList" :key="index" :class="index % 2 === 0 ? 'bg-gray-50' : ''">
-                <td class="border-t px-4 py-2">{{ index + 1 }}</td>
-                <td class="border-t px-4 py-2">{{ item.service }}</td>
+              <tr class="border-t">
+                <td class="px-4 py-2">{{ t('price.table.section1.subsection1.row1.number') }}</td>
+                <td class="px-4 py-2">{{ t('price.table.section1.subsection1.row1.description') }}</td>
+                <td class="px-4 py-2">{{ t('price.table.section1.subsection1.row1.unit') }}</td>
+                <td class="px-4 py-2">{{ t('price.table.section1.subsection1.row1.price') }}</td>
+              </tr>
+              <tr>
+                <th colspan="4" class="bg-gray-100 text-left px-4 py-2">
+                  {{ t('price.table.section1.subsection2.title') }}
+                </th>
+              </tr>
+              <tr v-for="(item, index) in section1Subsection2Rows" :key="index" :class="index % 2 === 0 ? 'bg-gray-50' : ''">
+                <td class="border-t px-4 py-2">{{ item.number }}</td>
+                <td class="border-t px-4 py-2">{{ item.description }}</td>
+                <td class="border-t px-4 py-2">{{ item.unit }}</td>
+                <td class="border-t px-4 py-2">{{ item.price }}</td>
+              </tr>
+              <!-- Section 2 -->
+              <tr>
+                <th colspan="4" class="bg-gray-200 text-left px-4 py-2 text-lg">
+                  {{ t('price.table.section2.title') }}
+                </th>
+              </tr>
+              <tr>
+                <th colspan="4" class="bg-gray-100 text-left px-4 py-2">
+                  {{ t('price.table.section2.subsection1.title') }}
+                </th>
+              </tr>
+              <tr v-for="(item, index) in section2Subsection1Rows" :key="index" :class="index % 2 === 0 ? 'bg-gray-50' : ''">
+                <td class="border-t px-4 py-2">{{ item.number }}</td>
+                <td class="border-t px-4 py-2">{{ item.description }}</td>
+                <td class="border-t px-4 py-2">{{ item.unit }}</td>
+                <td class="border-t px-4 py-2">{{ item.price }}</td>
+              </tr>
+              <tr>
+                <th colspan="4" class="bg-gray-100 text-left px-4 py-2">
+                  {{ t('price.table.section2.subsection2.title') }}
+                </th>
+              </tr>
+              <tr v-for="(item, index) in section2Subsection2Rows" :key="index" :class="index % 2 === 0 ? 'bg-gray-50' : ''">
+                <td class="border-t px-4 py-2">{{ item.number }}</td>
+                <td class="border-t px-4 py-2">{{ item.description }}</td>
                 <td class="border-t px-4 py-2">{{ item.unit }}</td>
                 <td class="border-t px-4 py-2">{{ item.price }}</td>
               </tr>
             </tbody>
           </table>
-        </section>
-  
-        <!-- Additional Information -->
-        <section class="mb-12">
-          <h2 class="text-2xl font-semibold mb-4">Дополнительная информация</h2>
-          <p class="text-gray-700 leading-relaxed">
-            Сроки проведения сертификационных курсов, циклов повышения квалификации, семинаров, мастер-классов, тренингов, стажировок могут быть изменены в связи с заявками организаций.
-          </p>
-          <p class="text-gray-700 leading-relaxed mt-4">
-            К обучению на сертификационном курсе для межпрофильной специализации допускаются работники с высшим образованием, после резидентуры, согласно приказу №218.
-          </p>
-        </section>
-  
-        <!-- Contact Information -->
-        <section>
-          <h2 class="text-2xl font-semibold mb-4">Контактная информация</h2>
-          <p class="text-gray-700 leading-relaxed">
-            Мы находимся по адресу:<br>
-            г. Караганда, ул. Мустафина, 15<br>
-            Телефон: +7 (7212) 56-52-63<br>
-            Электронная почта: <a href="mailto:m_otarbaeva@mail.ru" class="text-blue-600 hover:underline">m_otarbaeva@mail.ru</a>, <a href="mailto:aigerabekmur@mail.ru" class="text-blue-600 hover:underline">aigerabekmur@mail.ru</a>
-          </p>
-        </section>
-      </main>
-  
-      <!-- Footer -->
-      <footer class="bg-blue-800 text-white py-4">
-        <div class="container mx-auto text-center">
-          &copy; 2024 НАО "Национальный центр гигиены труда и профессиональных заболеваний"
         </div>
-      </footer>
-    </div>
-  </template> 
-<script setup lang="ts">
-import { ref } from 'vue'
+      </section>
 
-const priceList = ref([
+      <!-- Additional Information -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">{{ t('price.additionalInfo.title') }}</h2>
+        <p class="text-gray-700 leading-relaxed" v-html="t('price.additionalInfo.paragraph1')"></p>
+        <p class="text-gray-700 leading-relaxed mt-4" v-html="t('price.additionalInfo.paragraph2')"></p>
+      </section>
+
+      <!-- Contact Information -->
+      <section>
+        <h2 class="text-2xl font-semibold mb-4">{{ t('price.contact.title') }}</h2>
+        <p class="text-gray-700 leading-relaxed">
+          {{ t('price.contact.address') }}<br>
+          {{ t('price.contact.phone') }}<br>
+          {{ t('price.contact.email') }}
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white py-4">
+      <div class="container mx-auto text-center">
+        &copy; {{ new Date().getFullYear() }} {{ t('price.footer') }}
+      </div>
+    </footer>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
+// Данные для таблицы
+const section1Subsection2Rows = computed(() => [
   {
-    service: 'Сертификационные курсы очная форма обучения (30 кредитов, 900 часов/15 недель)',
-    unit: '1 чел.',
-    price: '525 000'
+    number: '1',
+    description: t('price.table.section1.subsection2.row1.description'),
+    unit: t('price.table.section1.subsection2.row1.unit'),
+    price: t('price.table.section1.subsection2.row1.price'),
   },
   {
-    service: 'Циклы повышения квалификации для врачей (2 кредита, 60 часов/1 неделя)',
-    unit: '1 чел.',
-    price: '35 000'
+    number: '2',
+    description: t('price.table.section1.subsection2.row2.description'),
+    unit: t('price.table.section1.subsection2.row2.unit'),
+    price: t('price.table.section1.subsection2.row2.price'),
   },
   {
-    service: 'Циклы повышения квалификации для врачей (4 кредита, 120 часов/2 недели)',
-    unit: '1 чел.',
-    price: '70 000'
+    number: '3',
+    description: t('price.table.section1.subsection2.row3.description'),
+    unit: t('price.table.section1.subsection2.row3.unit'),
+    price: t('price.table.section1.subsection2.row3.price'),
   },
   {
-    service: 'Циклы повышения квалификации для врачей (6 кредитов, 180 часов/3 недели)',
-    unit: '1 чел.',
-    price: '105 000'
+    number: '4',
+    description: t('price.table.section1.subsection2.row4.description'),
+    unit: t('price.table.section1.subsection2.row4.unit'),
+    price: t('price.table.section1.subsection2.row4.price'),
+  },
+]);
+
+const section2Subsection1Rows = computed(() => [
+  {
+    number: '1',
+    description: t('price.table.section2.subsection1.row1.description'),
+    unit: t('price.table.section2.subsection1.row1.unit'),
+    price: t('price.table.section2.subsection1.row1.price'),
+  },
+]);
+
+const section2Subsection2Rows = computed(() => [
+  {
+    number: '1',
+    description: t('price.table.section2.subsection2.row1.description'),
+    unit: t('price.table.section2.subsection2.row1.unit'),
+    price: t('price.table.section2.subsection2.row1.price'),
   },
   {
-    service: 'Циклы повышения квалификации для врачей (8 кредитов, 240 часов/4 недели)',
-    unit: '1 чел.',
-    price: '140 000'
+    number: '2',
+    description: t('price.table.section2.subsection2.row2.description'),
+    unit: t('price.table.section2.subsection2.row2.unit'),
+    price: t('price.table.section2.subsection2.row2.price'),
   },
-  {
-    service: 'Выездные циклы повышения квалификации для врачей (2 кредита, 60 часов/1 неделя)',
-    unit: '1 час',
-    price: '80 000'
-  },
-  {
-    service: 'Обучающий семинар, мастер-класс на базе НЦГТиПЗ (6 часов/1 день)',
-    unit: '1 чел.',
-    price: '6 000'
-  },
-  {
-    service: 'Выездной обучающий семинар, мастер-класс (6 часов/1 день)',
-    unit: '1 чел.',
-    price: '30 000'
-  }
-])
+]);
 </script>
+
+<style scoped>
+/* Дополнительные стили, если необходимо */
+.table-container {
+  overflow-x: auto;
+}
+</style>

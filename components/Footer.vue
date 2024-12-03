@@ -5,7 +5,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Логотип и краткая информация -->
         <div>
-          <img src="/logo.png" alt="Логотип" class="h-32 mb-4" />
+          <img src="/logo footer.png" alt="Логотип" class="h-32 mb-4" />
           <p class="text-sm">
             {{ $t('footer.description') }}
           </p>

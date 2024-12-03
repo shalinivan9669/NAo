@@ -233,12 +233,7 @@
       description: t('clinics.main.departments.allergology.description'),
       phone: '+7 (7212) 56 53 10',
     },
-    {
-      key: 'dayHospital',
-      title: t('clinics.main.departments.dayHospital.title'),
-      description: t('clinics.main.departments.dayHospital.description'),
-      phone: '+7 (7212) 56 52 63',
-    },
+     
   ]);
   
   // Данные для филиалов
