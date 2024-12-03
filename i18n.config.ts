@@ -331,6 +331,31 @@ export default defineI18nConfig(() => ({
         "description": "Пациенттерге тәулік бойы стационарда болудың қажеті жоқ емдеуді ұсынады."
       }
     }
+  },"boardOfDirectors": {
+    "title": "Директорлар Кеңесі",
+    "membersTitle": "Директорлар Кеңесінің Мүшелері",
+    "mainMember": {
+      "fullName": "Отаров Ертай Жалгаспаевич",
+      "activity": "Генеральный директор",
+      "description": "Отаров Ертай Жалгаспаевич НАО \"Ұлттық Еңбек Гигиенасы және Мамандыққа Байланысты Аурулардың Орталығының негізін қалаушы және генеральды директоры. Ол орталықтың стратегиялық дамуын басқарады, жоғары деңгейдегі ғылыми-зерттеу жұмыстарын және еңбек гигиенасы саласындағы заманауи әдістерді енгізуді қамтамасыз етеді."
+    },
+    "members": {
+      "member1": {
+        "fullName": "Иванов Сергей Петрович",
+        "activity": "Қаржы директоры",
+        "description": "Иванов Сергей Петрович орталықтың қаржылық жоспарлау және бюджет басқаруымен айналысады. Ол ұйымның мақсаттарына жету үшін ресурстарды тиімді бөлуге жауапты."
+      },
+      "member2": {
+        "fullName": "Петров Алексей Иванович",
+        "activity": "Техникалық директор",
+        "description": "Петров Алексей Иванович орталықтың техникалық қолдау және инфрақұрылымын дамытуға жауапты. Ол ғылыми-зерттеу жұмыстарының сапасын жақсарту үшін заманауи технологияларды енгізеді."
+      },
+      "member3": {
+        "fullName": "Сидоров Дмитрий Николаевич",
+        "activity": "Ғылыми директор",
+        "description": "Сидоров Дмитрий Николаевич еңбек гигиенасы саласындағы ғылыми-зерттеулер мен әзірлемелерді басқарады. Ол зерттеулердің жоғары деңгейін және олардың дүниежүзілік стандарттарға сәйкестігін қамтамасыз етеді."
+      }
+    }
   },
         "support": {
           "title": "Халықты Қолдау",
@@ -349,7 +374,43 @@ export default defineI18nConfig(() => ({
               "description": "Біз еңбек жағдайларының еңбек етушілердің денсаулығына әсерін зерттеуге және алдын алу үшін тиімді әдістерді әзірлеуге бағытталған зерттеулер жүргіземіз."
             }
           }
+        }, "location": {
+          "title": "Біздің Орналасқан Жері",
+          "subtitle": "Ұлттық Еңбек Гигиенасы және Мамандыққа Байланысты Аурулардың Орталығына қош келдіңіздер",
+          "infoTitle": "Орталық туралы Ақпарат",
+          "infoParagraph1": "Біздің орталық еңбек гигиенасы саласындағы зерттеулер мен әзірлемелерге маманданған. Біз барлық жұмысшыларға қауіпсіз және сау еңбек жағдайларын қамтамасыз етуге тырысамыз.",
+          "infoParagraph2": "Төменде біздің орналасқан жеріміз және бізге қалай жетуге болатыны туралы ақпарат берілген.",
+          "address": "Мекен-жайы",
+          "addressValue": "Мустафина көшесі, 15, Қарағанды.",
+          "phone": "Телефон",
+          "email": "Электрондық пошта",
+          "placemarkHint": "Біздің Орталық",
+          "placemarkBalloon": "Ұлттық Еңбек Гигиенасы және Мамандыққа Байланысты Аурулардың Орталығы",
+          "directions": {
+            "fromMikeuduka": {
+              "title": "Майкудуктен",
+              "byCar": "Автомобильмен",
+              "byCarDescription": "Республикалық проспекті бойымен оңтүстік-батыс бағытта жүріп, содан кейін Мустафина көшесіне бұрыласыз. 15-ші үйге дейін жүріңіз.",
+              "byPublicTransport": "Қоғамдық көлікпен",
+              "byPublicTransportDescription": "«32-ші квартал» аялдамасына бағытталған № 40 маршрутты автобустан отырыңыз. Онда Мустафина көшесіне, 15-ші үйге дейін жаяу жүріңіз."
+            },
+            "fromYugoVostocha": {
+              "title": "Оңтүстік-Шығыстан",
+              "byCar": "Автомобильмен",
+              "byCarDescription": "Алиханова көшесі бойымен солтүстік-батыс бағытта жүріп, содан кейін Мустафина көшесіне бұрыласыз. 15-ші үйге дейін жүріңіз.",
+              "byPublicTransport": "Қоғамдық көлікпен",
+              "byPublicTransportDescription": "«32-ші квартал» аялдамасына бағытталған № 33 маршрутты автобустан отырыңыз. Онда Мустафина көшесіне, 15-ші үйге дейін жаяу жүріңіз."
+            },
+            "fromCenter": {
+              "title": "Қаланың орталығынан",
+              "byCar": "Автомобильмен",
+              "byCarDescription": "Бухар-жырау проспекті бойымен шығыс бағытта жүріп, содан кейін Мустафина көшесіне бұрыласыз. 15-ші үйге дейін жүріңіз.",
+              "byPublicTransport": "Қоғамдық көлікпен",
+              "byPublicTransportDescription": "«32-ші квартал» аялдамасына бағытталған № 118 маршрутты автобустан отырыңыз. Онда Мустафина көшесіне, 15-ші үйге дейін жаяу жүріңіз."
+            }
+          }
         },
+        
         "stateProcurements": {
     "title": "Мемлекеттік сатып алулар",
     "generalInfoTitle": "Жалпы ақпарат",
@@ -535,7 +596,7 @@ export default defineI18nConfig(() => ({
   }
       },
     ru: {
-        "title": "НАО  НАЦИОНАЛЬНЫЙ ЦЕНТР ГИГИЕНЫ ТРУДА И ПРОФЕССИОНАЛЬНЫХ ЗАБОЛЕВАНИЙ",
+        "title": "НАО  \"НАЦИОНАЛЬНЫЙ ЦЕНТР ГИГИЕНЫ ТРУДА И ПРОФЕССИОНАЛЬНЫХ ЗАБОЛЕВАНИЙ\" ",
 
         "home": {
           "about": {
@@ -610,6 +671,7 @@ export default defineI18nConfig(() => ({
             "phone": "Телефон регистратуры"
           }
         },
+        
         "clinics": {
           "main": {
             "aboutUs": {
@@ -720,7 +782,7 @@ export default defineI18nConfig(() => ({
     "history": "История",
     "values": "Ценности",
     "board_of_directors": "Совет директоров",
-    "elders_council": "Совет аксокалов",
+    "elders_council": "Совет аксакалов",
     "management": "Руководство",
     "partners": "Партнёры",
     "science": "Наука",
@@ -729,8 +791,9 @@ export default defineI18nConfig(() => ({
     "conferences": "Конференции",
     "young_scientists": "Молодые учёные",
     "library": "Библиотека",
-    "clinics": "Клиники",
-    "main_clinic": "Главная клиника",
+    "nao":"Научно исследовательская санитарно-гигиеническая лаборатория",
+    "clinics": "Клиника",
+    "main_clinic": "Клиника",
     "education": "Образование",
     "programs": "Программы",
     "prices": "Цены",
@@ -741,21 +804,38 @@ export default defineI18nConfig(() => ({
     "biblioteka":  "Журнал \"\Гигиена труда и медицинская экология\""
   },"location": {
     "title": "Наше Расположение",
-    "subtitle": "Найдите нас на карте",
-    "infoTitle": "Контактная Информация",
-    "infoParagraph1": "НАЦИОНАЛЬНЫЙ ЦЕНТР ГИГИЕНЫ ТРУДА И ПРОФЕССИОНАЛЬНЫХ ЗАБОЙВАНИЙ предоставляет высококачественные гигиенические, медицинские и экологические услуги уже более 65 лет.",
-    "infoParagraph2": "Наш центр расположен в сердце Казахстана, обеспечивая удобный доступ для всех наших клиентов и партнеров.",
+    "subtitle": "Добро пожаловать в Национальный Центр Гигиены Труда и Профессиональных Заболеваний",
+    "infoTitle": "Информация о Центре",
+    "infoParagraph1": "Наш центр специализируется на исследованиях и разработках в области гигиены труда. Мы стремимся обеспечить безопасные и здоровые условия труда для всех работников.",
+    "infoParagraph2": "Ниже представлена информация о нашем местоположении и способах добраться до нас.",
     "address": "Адрес",
-    "addressValue": "г. Караганда, ул. Мустафина, д. 15",
+    "addressValue": "улица Мустафина, 15, Караганда.",
     "phone": "Телефон",
-    "email": "Email",
-    "placemarkHint": "НАЦИОНАЛЬНЫЙ ЦЕНТР ГИГИЕНЫ ТРУДА И ПРОФЕССИОНАЛЬНЫХ ЗАБОЙВАНИЙ",
-    "placemarkBalloon": "Добро пожаловать в наш центр!",
-    "socialMedia": {
-      "facebook": "Facebook",
-      "twitter": "Twitter",
-      "linkedin": "LinkedIn",
-      "instagram": "Instagram"
+    "email": "Электронная почта",
+    "placemarkHint": "Наш Центр",
+    "placemarkBalloon": "Национальный Центр Гигиены Труда и Профессиональных Заболеваний",
+    "directions": {
+      "fromMikeuduka": {
+        "title": "Из Майкудука",
+        "byCar": "На автомобиле",
+        "byCarDescription": "Следуйте по проспекту Республики в юго-западном направлении, затем поверните на улицу Мустафина. Продолжайте движение до дома № 15.",
+        "byPublicTransport": "На общественном транспорте",
+        "byPublicTransportDescription": "Сядьте на автобус маршрута № 40, следующего до остановки \"32-й квартал\". Оттуда пройдите пешком до улицы Мустафина, 15."
+      },
+      "fromYugoVostocha": {
+        "title": "С Юго-Востока",
+        "byCar": "На автомобиле",
+        "byCarDescription": "Двигайтесь по улице Алиханова в северо-западном направлении, затем поверните на улицу Мустафина. Продолжайте движение до дома № 15.",
+        "byPublicTransport": "На общественном транспорте",
+        "byPublicTransportDescription": "Сядьте на автобус маршрута № 33 до остановки \"32-й квартал\". Оттуда пройдите пешком до улицы Мустафина, 15."
+      },
+      "fromCenter": {
+        "title": "Из центра города",
+        "byCar": "На автомобиле",
+        "byCarDescription": "Следуйте по проспекту Бухар-жырау в восточном направлении, затем поверните на улицу Мустафина. Продолжайте движение до дома № 15.",
+        "byPublicTransport": "На общественном транспорте",
+        "byPublicTransportDescription": "Сядьте на автобус маршрута № 118 до остановки \"32-й квартал\". Оттуда пройдите пешком до улицы Мустафина, 15."
+      }
     }
   },
         "footer": {
@@ -767,7 +847,7 @@ export default defineI18nConfig(() => ({
           "description": "НАО \"Национальный центр гигиены труда и профессиональных заболеваний Казахстана\". Мы стремимся к улучшению здоровья и безопасности трудящихся."
         },
         "hero": {
-          "title": "Национальный Центр Гигиены Труда и Профессиональных Заболеваний",
+          "title": "Национальный центр гигиены труда и профессиональных заболеваний",
           "subtitle": "Миссия нашего центра — обеспечение здоровья и безопасности трудящихся.",
           "description1": "Национальный Центр Гигиены Труда и Профессиональных Заболеваний играет ключевую роль в поддержании здоровья рабочих и предотвращении профессиональных заболеваний в Казахстане.",
           "description2": "Мы предоставляем передовые медицинские услуги, проводим исследования и обучаем специалистов в области гигиены труда.",
@@ -778,6 +858,7 @@ export default defineI18nConfig(() => ({
           "subtitle": "Опытные специалисты и передовые исследования",
           "description": "Наш центр объединяет высококвалифицированных специалистов с многолетним опытом работы в области гигиены труда и профилактики профессиональных заболеваний. Мы проводим новаторские исследования, внедряем современные технологии и постоянно повышаем уровень знаний наших сотрудников."
         },
+         
         "quality": {
           "title": "Качество Обслуживания",
           "subtitle": "Высокие стандарты и индивидуальный подход",
@@ -793,6 +874,33 @@ export default defineI18nConfig(() => ({
             }
           ]
         },
+        "boardOfDirectors": {
+    "title": "Совет Директоров",
+    "membersTitle": "Члены Совета Директоров",
+    "mainMember": {
+      "fullName": "Отаров Ертай Жалгаспаевич",
+      "activity": "Генеральный директор",
+      "description": "Отаров Ертай Жалгаспаевич является основателем и генеральным директором НАО \"Национальный центр гигиены труда и профессиональных заболеваний\". Он руководит стратегическим развитием центра, обеспечивая высокий уровень научных исследований и внедрение передовых методик в области гигиены труда."
+    },
+    "members": {
+      "member1": {
+        "fullName": " ",
+        "activity": "Финансовый директор",
+        "description": " отвечает за финансовое планирование и управление бюджетом центра. Он обеспечивает эффективное распределение ресурсов для достижения целей организации."
+      },
+      "member2": {
+        "fullName": " ",
+        "activity": "Технический директор",
+        "description": "  отвечает за техническую поддержку и развитие инфраструктуры центра. Он внедряет современные технологии для улучшения качества научных исследований."
+      },
+      "member3": {
+        "fullName": " ",
+        "activity": "Научный директор",
+        "description": "  руководит научными исследованиями и разработками в области гигиены труда. Он обеспечивает высокий уровень исследований и их соответствие мировым стандартам."
+      }
+    }
+  },
+         
         "support": {
           "title": "Поддержка Населения",
           "subtitle": "Инициативы и программы для обеспечения здоровья трудящихся",
@@ -1416,6 +1524,31 @@ export default defineI18nConfig(() => ({
               "author": "Maria Sidorova"
             }
           ]
+        }, "boardOfDirectors": {
+          "title": "Board of Directors",
+          "membersTitle": "Board of Directors Members",
+          "mainMember": {
+            "fullName": "Otarov Ertai Zhalgaspaevich",
+            "activity": "General Director",
+            "description": "Otarov Ertai Zhalgaspaevich is the founder and General Director of the National Center for Occupational Hygiene and Professional Diseases. He oversees the strategic development of the center, ensuring a high level of scientific research and the implementation of advanced methodologies in the field of occupational hygiene."
+          },
+          "members": {
+            "member1": {
+              "fullName": "Ivanov Sergey Petrovich",
+              "activity": "Financial Director",
+              "description": "Ivanov Sergey Petrovich is responsible for financial planning and budget management of the center. He ensures the effective allocation of resources to achieve the organization's goals."
+            },
+            "member2": {
+              "fullName": "Petrov Alexey Ivanovich",
+              "activity": "Technical Director",
+              "description": "Petrov Alexey Ivanovich oversees technical support and infrastructure development of the center. He implements modern technologies to enhance the quality of scientific research."
+            },
+            "member3": {
+              "fullName": "Sidorov Dmitry Nikolaevich",
+              "activity": "Scientific Director",
+              "description": "Sidorov Dmitry Nikolaevich leads scientific research and development in the field of occupational hygiene. He ensures the high quality of research and its compliance with global standards."
+            }
+          }
         },
         "support": {
           "title": "Support for the Population",
@@ -1435,6 +1568,7 @@ export default defineI18nConfig(() => ({
             }
           }
         },
+         
         "stateProcurements": {
     "title": "State Procurements",
     "generalInfoTitle": "General Information",
@@ -1497,6 +1631,41 @@ export default defineI18nConfig(() => ({
     "additionalResource1": "State Procurement Portal of the Republic of Kazakhstan",
     "additionalResource2": "Guide to tender participation",
     "additionalResource3": "Frequently Asked Questions"
+  },"location": {
+    "title": "Our Location",
+    "subtitle": "Welcome to the National Center for Occupational Hygiene and Professional Diseases",
+    "infoTitle": "About the Center",
+    "infoParagraph1": "Our center specializes in research and development in the field of occupational hygiene. We strive to ensure safe and healthy working conditions for all employees.",
+    "infoParagraph2": "Below is information about our location and how to reach us.",
+    "address": "Address",
+    "addressValue": "15 Mustafina Street, Karaganda.",
+    "phone": "Phone",
+    "email": "Email",
+    "placemarkHint": "Our Center",
+    "placemarkBalloon": "National Center for Occupational Hygiene and Professional Diseases",
+    "directions": {
+      "fromMikeuduka": {
+        "title": "From Mikeuduka",
+        "byCar": "By Car",
+        "byCarDescription": "Follow Respubliki Avenue southwest, then turn onto Mustafina Street. Continue driving to house No. 15.",
+        "byPublicTransport": "By Public Transport",
+        "byPublicTransportDescription": "Take bus route No. 40 towards the \"32nd Quarter\" stop. From there, walk to Mustafina Street, 15."
+      },
+      "fromYugoVostocha": {
+        "title": "From Southeast",
+        "byCar": "By Car",
+        "byCarDescription": "Drive along Alikhanova Street northwest, then turn onto Mustafina Street. Continue driving to house No. 15.",
+        "byPublicTransport": "By Public Transport",
+        "byPublicTransportDescription": "Take bus route No. 33 to the \"32nd Quarter\" stop. From there, walk to Mustafina Street, 15."
+      },
+      "fromCenter": {
+        "title": "From City Center",
+        "byCar": "By Car",
+        "byCarDescription": "Follow Bukhar-Zhyrau Avenue east, then turn onto Mustafina Street. Continue driving to house No. 15.",
+        "byPublicTransport": "By Public Transport",
+        "byPublicTransportDescription": "Take bus route No. 118 to the \"32nd Quarter\" stop. From there, walk to Mustafina Street, 15."
+      }
+    }
   },
   "history": {
     "title": "History of the Center",

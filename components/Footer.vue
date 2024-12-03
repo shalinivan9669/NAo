@@ -5,7 +5,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Логотип и краткая информация -->
         <div>
-          <img src="" alt="Логотип" class="h-12 mb-4" />
+          <img src="/logo.png" alt="Логотип" class="h-32 mb-4" />
           <p class="text-sm">
             {{ $t('footer.description') }}
           </p>
@@ -15,7 +15,7 @@
         <div>
           <h3 class="text-lg font-semibold mb-4">{{ $t('footer.quick_links') }}</h3>
           <ul class="space-y-2">
-            <li><NuxtLink to="/about" class="hover:underline">{{ $t('menu.about') }}</NuxtLink></li>
+            <li><NuxtLink to="/" class="hover:underline">{{ $t('menu.about') }}</NuxtLink></li>
             <li><NuxtLink to="/science" class="hover:underline">{{ $t('menu.science') }}</NuxtLink></li>
             <li><NuxtLink to="/clinics" class="hover:underline">{{ $t('menu.clinics') }}</NuxtLink></li>
             <li><NuxtLink to="/education/programs" class="hover:underline">{{ $t('menu.education') }}</NuxtLink></li>
@@ -74,11 +74,7 @@
         <p class="text-sm">
           © 2024 НАО "Центр гигиены". Все права защищены.
         </p>
-        <ul class="flex space-x-4 mt-4 md:mt-0">
-          <li><NuxtLink to="/privacy-policy" class="hover:underline">{{ $t('footer.privacy_policy') }}</NuxtLink></li>
-          <li><NuxtLink to="/terms-of-service" class="hover:underline">{{ $t('footer.terms_of_service') }}</NuxtLink></li>
-          <li><NuxtLink to="/sitemap" class="hover:underline">{{ $t('footer.sitemap') }}</NuxtLink></li>
-        </ul>
+        
       </div>
     </div>
     </footer>

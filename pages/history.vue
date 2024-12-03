@@ -162,7 +162,7 @@
       <p class="text-gray-700 mb-6">
         {{ $t('history.conclusion.paragraph') }}
       </p>
-      <a href="/contacts" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">{{ $t('history.conclusion.contactUs') }}</a>
+      <a href="/contacts/contact-us" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">{{ $t('history.conclusion.contactUs') }}</a>
     </div>
   </section>
 </template>

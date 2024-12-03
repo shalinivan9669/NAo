@@ -150,14 +150,13 @@ const menu = ref([
       { title: 'publications', url: '/publications' },
       { title: 'conferences', url: '/conferences' },
       { title: 'young_scientists', url: '/young-scientists' },
+      { title: 'nao', url: '/nao-lab' },
       { title: 'library', url: '/library' }, // Новый пункт
     ],
   },
   {
     title: 'clinics',
-    submenu: [
-      { title: 'main_clinic', url: '/clinics/main' },
-    ],
+    url: '/clinics'
   },
   {
     title: 'education',
