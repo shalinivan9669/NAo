@@ -47,11 +47,33 @@
                 </th>
               </tr>
               <!-- Section 1 Subsection 2 Rows -->
-              <tr v-for="(row, index) in [1, 2, 3, 4]" :key="'s1s2r' + index" :class="index % 2 === 0 ? 'bg-gray-50' : ''">
-                <td class="border-t px-4 py-2">{{ $t(`price.table.section1.subsection2.row${row}.number`) }}</td>
-                <td class="border-t px-4 py-2">{{ $t(`price.table.section1.subsection2.row${row}.description`) }}</td>
-                <td class="border-t px-4 py-2">{{ $t(`price.table.section1.subsection2.row${row}.unit`) }}</td>
-                <td class="border-t px-4 py-2">{{ $t(`price.table.section1.subsection2.row${row}.price`) }}</td>
+              <!-- Row 1 -->
+              <tr class="border-t bg-gray-50">
+                <td class="px-4 py-2">{{ $t('price.table.section1.subsection2.row1.number') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section1.subsection2.row1.description') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section1.subsection2.row1.unit') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section1.subsection2.row1.price') }}</td>
+              </tr>
+              <!-- Row 2 -->
+              <tr class="border-t">
+                <td class="px-4 py-2">{{ $t('price.table.section1.subsection2.row2.number') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section1.subsection2.row2.description') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section1.subsection2.row2.unit') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section1.subsection2.row2.price') }}</td>
+              </tr>
+              <!-- Row 3 -->
+              <tr class="border-t bg-gray-50">
+                <td class="px-4 py-2">{{ $t('price.table.section1.subsection2.row3.number') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section1.subsection2.row3.description') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section1.subsection2.row3.unit') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section1.subsection2.row3.price') }}</td>
+              </tr>
+              <!-- Row 4 -->
+              <tr class="border-t">
+                <td class="px-4 py-2">{{ $t('price.table.section1.subsection2.row4.number') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section1.subsection2.row4.description') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section1.subsection2.row4.unit') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section1.subsection2.row4.price') }}</td>
               </tr>
               <!-- Section 2 Title -->
               <tr>
@@ -66,7 +88,7 @@
                 </th>
               </tr>
               <!-- Section 2 Subsection 1 Row -->
-              <tr class="border-t">
+              <tr class="border-t bg-gray-50">
                 <td class="px-4 py-2">{{ $t('price.table.section2.subsection1.row1.number') }}</td>
                 <td class="px-4 py-2">{{ $t('price.table.section2.subsection1.row1.description') }}</td>
                 <td class="px-4 py-2">{{ $t('price.table.section2.subsection1.row1.unit') }}</td>
@@ -79,11 +101,19 @@
                 </th>
               </tr>
               <!-- Section 2 Subsection 2 Rows -->
-              <tr v-for="(row, index) in [1, 2]" :key="'s2s2r' + index" :class="index % 2 === 0 ? 'bg-gray-50' : ''">
-                <td class="border-t px-4 py-2">{{ $t(`price.table.section2.subsection2.row${row}.number`) }}</td>
-                <td class="border-t px-4 py-2">{{ $t(`price.table.section2.subsection2.row${row}.description`) }}</td>
-                <td class="border-t px-4 py-2">{{ $t(`price.table.section2.subsection2.row${row}.unit`) }}</td>
-                <td class="border-t px-4 py-2">{{ $t(`price.table.section2.subsection2.row${row}.price`) }}</td>
+              <!-- Row 1 -->
+              <tr class="border-t">
+                <td class="px-4 py-2">{{ $t('price.table.section2.subsection2.row1.number') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section2.subsection2.row1.description') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section2.subsection2.row1.unit') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section2.subsection2.row1.price') }}</td>
+              </tr>
+              <!-- Row 2 -->
+              <tr class="border-t bg-gray-50">
+                <td class="px-4 py-2">{{ $t('price.table.section2.subsection2.row2.number') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section2.subsection2.row2.description') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section2.subsection2.row2.unit') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section2.subsection2.row2.price') }}</td>
               </tr>
             </tbody>
           </table>
@@ -118,7 +148,7 @@
 </template>
 
 <script setup lang="ts">
-// Нет необходимости в дополнительном коде в скрипте для данного случая
+/* Нет необходимости в дополнительных скриптах */
 </script>
 
 <style scoped>
