@@ -19,11 +19,13 @@
         <div class="overflow-x-auto">
           <table class="w-full table-auto bg-white shadow-md rounded">
             <thead>
+              <!-- Section 1 Title -->
               <tr>
                 <th colspan="4" class="bg-gray-200 text-left px-4 py-2 text-lg">
                   {{ $t('price.table.section1.title') }}
                 </th>
               </tr>
+              <!-- Subsection 1 Title -->
               <tr>
                 <th colspan="4" class="bg-gray-100 text-left px-4 py-2">
                   {{ $t('price.table.section1.subsection1.title') }}
@@ -31,50 +33,57 @@
               </tr>
             </thead>
             <tbody class="text-gray-700">
+              <!-- Section 1 Subsection 1 Row -->
               <tr class="border-t">
                 <td class="px-4 py-2">{{ $t('price.table.section1.subsection1.row1.number') }}</td>
                 <td class="px-4 py-2">{{ $t('price.table.section1.subsection1.row1.description') }}</td>
                 <td class="px-4 py-2">{{ $t('price.table.section1.subsection1.row1.unit') }}</td>
                 <td class="px-4 py-2">{{ $t('price.table.section1.subsection1.row1.price') }}</td>
               </tr>
+              <!-- Subsection 2 Title -->
               <tr>
                 <th colspan="4" class="bg-gray-100 text-left px-4 py-2">
                   {{ $t('price.table.section1.subsection2.title') }}
                 </th>
               </tr>
-              <tr v-for="(row, index) in section1Subsection2Rows" :key="index" :class="index % 2 === 0 ? 'bg-gray-50' : ''">
-                <td class="border-t px-4 py-2">{{ row.number }}</td>
-                <td class="border-t px-4 py-2">{{ row.description }}</td>
-                <td class="border-t px-4 py-2">{{ row.unit }}</td>
-                <td class="border-t px-4 py-2">{{ row.price }}</td>
+              <!-- Section 1 Subsection 2 Rows -->
+              <tr v-for="(row, index) in [1, 2, 3, 4]" :key="'s1s2r' + index" :class="index % 2 === 0 ? 'bg-gray-50' : ''">
+                <td class="border-t px-4 py-2">{{ $t(`price.table.section1.subsection2.row${row}.number`) }}</td>
+                <td class="border-t px-4 py-2">{{ $t(`price.table.section1.subsection2.row${row}.description`) }}</td>
+                <td class="border-t px-4 py-2">{{ $t(`price.table.section1.subsection2.row${row}.unit`) }}</td>
+                <td class="border-t px-4 py-2">{{ $t(`price.table.section1.subsection2.row${row}.price`) }}</td>
               </tr>
-              <!-- Section 2 -->
+              <!-- Section 2 Title -->
               <tr>
                 <th colspan="4" class="bg-gray-200 text-left px-4 py-2 text-lg">
                   {{ $t('price.table.section2.title') }}
                 </th>
               </tr>
+              <!-- Subsection 1 Title -->
               <tr>
                 <th colspan="4" class="bg-gray-100 text-left px-4 py-2">
                   {{ $t('price.table.section2.subsection1.title') }}
                 </th>
               </tr>
-              <tr v-for="(row, index) in section2Subsection1Rows" :key="index" :class="index % 2 === 0 ? 'bg-gray-50' : ''">
-                <td class="border-t px-4 py-2">{{ row.number }}</td>
-                <td class="border-t px-4 py-2">{{ row.description }}</td>
-                <td class="border-t px-4 py-2">{{ row.unit }}</td>
-                <td class="border-t px-4 py-2">{{ row.price }}</td>
+              <!-- Section 2 Subsection 1 Row -->
+              <tr class="border-t">
+                <td class="px-4 py-2">{{ $t('price.table.section2.subsection1.row1.number') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section2.subsection1.row1.description') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section2.subsection1.row1.unit') }}</td>
+                <td class="px-4 py-2">{{ $t('price.table.section2.subsection1.row1.price') }}</td>
               </tr>
+              <!-- Subsection 2 Title -->
               <tr>
                 <th colspan="4" class="bg-gray-100 text-left px-4 py-2">
                   {{ $t('price.table.section2.subsection2.title') }}
                 </th>
               </tr>
-              <tr v-for="(row, index) in section2Subsection2Rows" :key="index" :class="index % 2 === 0 ? 'bg-gray-50' : ''">
-                <td class="border-t px-4 py-2">{{ row.number }}</td>
-                <td class="border-t px-4 py-2">{{ row.description }}</td>
-                <td class="border-t px-4 py-2">{{ row.unit }}</td>
-                <td class="border-t px-4 py-2">{{ row.price }}</td>
+              <!-- Section 2 Subsection 2 Rows -->
+              <tr v-for="(row, index) in [1, 2]" :key="'s2s2r' + index" :class="index % 2 === 0 ? 'bg-gray-50' : ''">
+                <td class="border-t px-4 py-2">{{ $t(`price.table.section2.subsection2.row${row}.number`) }}</td>
+                <td class="border-t px-4 py-2">{{ $t(`price.table.section2.subsection2.row${row}.description`) }}</td>
+                <td class="border-t px-4 py-2">{{ $t(`price.table.section2.subsection2.row${row}.unit`) }}</td>
+                <td class="border-t px-4 py-2">{{ $t(`price.table.section2.subsection2.row${row}.price`) }}</td>
               </tr>
             </tbody>
           </table>
@@ -109,81 +118,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
-import { useI18n } from 'vue-i18n';
-
-const { t, locale } = useI18n();
-
-// Реактивные данные для таблицы
-const section1Subsection2Rows = ref([]);
-const section2Subsection1Rows = ref([]);
-const section2Subsection2Rows = ref([]);
-
-// Функция для обновления данных таблицы
-const updateRows = () => {
-  section1Subsection2Rows.value = [
-    {
-      number: t('price.table.section1.subsection2.row1.number'),
-      description: t('price.table.section1.subsection2.row1.description'),
-      unit: t('price.table.section1.subsection2.row1.unit'),
-      price: t('price.table.section1.subsection2.row1.price'),
-    },
-    {
-      number: t('price.table.section1.subsection2.row2.number'),
-      description: t('price.table.section1.subsection2.row2.description'),
-      unit: t('price.table.section1.subsection2.row2.unit'),
-      price: t('price.table.section1.subsection2.row2.price'),
-    },
-    {
-      number: t('price.table.section1.subsection2.row3.number'),
-      description: t('price.table.section1.subsection2.row3.description'),
-      unit: t('price.table.section1.subsection2.row3.unit'),
-      price: t('price.table.section1.subsection2.row3.price'),
-    },
-    {
-      number: t('price.table.section1.subsection2.row4.number'),
-      description: t('price.table.section1.subsection2.row4.description'),
-      unit: t('price.table.section1.subsection2.row4.unit'),
-      price: t('price.table.section1.subsection2.row4.price'),
-    },
-  ];
-
-  section2Subsection1Rows.value = [
-    {
-      number: t('price.table.section2.subsection1.row1.number'),
-      description: t('price.table.section2.subsection1.row1.description'),
-      unit: t('price.table.section2.subsection1.row1.unit'),
-      price: t('price.table.section2.subsection1.row1.price'),
-    },
-  ];
-
-  section2Subsection2Rows.value = [
-    {
-      number: t('price.table.section2.subsection2.row1.number'),
-      description: t('price.table.section2.subsection2.row1.description'),
-      unit: t('price.table.section2.subsection2.row1.unit'),
-      price: t('price.table.section2.subsection2.row1.price'),
-    },
-    {
-      number: t('price.table.section2.subsection2.row2.number'),
-      description: t('price.table.section2.subsection2.row2.description'),
-      unit: t('price.table.section2.subsection2.row2.unit'),
-      price: t('price.table.section2.subsection2.row2.price'),
-    },
-  ];
-};
-
-// Инициализация данных
-updateRows();
-
-// Обновление данных при смене локали
-watch(locale, () => {
-  updateRows();
-});
+// Нет необходимости в дополнительном коде в скрипте для данного случая
 </script>
 
 <style scoped>
-.table-container {
-  overflow-x: auto;
-}
+/* Дополнительные стили, если необходимо */
 </style>
