@@ -16,7 +16,7 @@
           <h3 class="text-lg font-semibold mb-4">{{ $t('footer.quick_links') }}</h3>
           <ul class="space-y-2">
             <li><NuxtLink to="/" class="hover:underline">{{ $t('menu.about') }}</NuxtLink></li>
-            <li><NuxtLink to="/science" class="hover:underline">{{ $t('menu.science') }}</NuxtLink></li>
+            <li><NuxtLink to="/nao-lab" class="hover:underline">{{ $t('menu.science') }}</NuxtLink></li>
             <li><NuxtLink to="/clinics" class="hover:underline">{{ $t('menu.clinics') }}</NuxtLink></li>
             <li><NuxtLink to="/education/programs" class="hover:underline">{{ $t('menu.education') }}</NuxtLink></li>
             <li><NuxtLink to="/contacts/contact-us" class="hover:underline">{{ $t('menu.contacts') }}</NuxtLink></li>

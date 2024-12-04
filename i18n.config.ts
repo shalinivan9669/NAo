@@ -590,7 +590,7 @@ export default defineI18nConfig(() => ({
       }
     }
         },
-          "location": {
+        "location": {
           "title": "Біздің Орналасқан Жері",
           "subtitle": "Ұлттық Еңбек Гигиенасы және Мамандыққа Байланысты Аурулардың Орталығына қош келдіңіздер",
           "infoTitle": "Орталық туралы Ақпарат",
@@ -598,32 +598,12 @@ export default defineI18nConfig(() => ({
           "infoParagraph2": "Төменде біздің орналасқан жеріміз және бізге қалай жетуге болатыны туралы ақпарат берілген.",
           "address": "Мекен-жайы",
           "addressValue": "Мустафина көшесі, 15, Қарағанды.",
-          "phone": "Телефон",
-          "email": "Электрондық пошта",
           "placemarkHint": "Біздің Орталық",
           "placemarkBalloon": "Ұлттық Еңбек Гигиенасы және Мамандыққа Байланысты Аурулардың Орталығы",
-          "directions": {
-            "fromMikeuduka": {
-              "title": "Майкудуктен",
-              "byCar": "Автомобильмен",
-              "byCarDescription": "Республикалық проспекті бойымен оңтүстік-батыс бағытта жүріп, содан кейін Мустафина көшесіне бұрыласыз. 15-ші үйге дейін жүріңіз.",
-              "byPublicTransport": "Қоғамдық көлікпен",
-              "byPublicTransportDescription": "«32-ші квартал» аялдамасына бағытталған № 40 маршрутты автобустан отырыңыз. Онда Мустафина көшесіне, 15-ші үйге дейін жаяу жүріңіз."
-            },
-            "fromYugoVostocha": {
-              "title": "Оңтүстік-Шығыстан",
-              "byCar": "Автомобильмен",
-              "byCarDescription": "Алиханова көшесі бойымен солтүстік-батыс бағытта жүріп, содан кейін Мустафина көшесіне бұрыласыз. 15-ші үйге дейін жүріңіз.",
-              "byPublicTransport": "Қоғамдық көлікпен",
-              "byPublicTransportDescription": "«32-ші квартал» аялдамасына бағытталған № 33 маршрутты автобустан отырыңыз. Онда Мустафина көшесіне, 15-ші үйге дейін жаяу жүріңіз."
-            },
-            "fromCenter": {
-              "title": "Қаланың орталығынан",
-              "byCar": "Автомобильмен",
-              "byCarDescription": "Бухар-жырау проспекті бойымен шығыс бағытта жүріп, содан кейін Мустафина көшесіне бұрыласыз. 15-ші үйге дейін жүріңіз.",
-              "byPublicTransport": "Қоғамдық көлікпен",
-              "byPublicTransportDescription": "«32-ші квартал» аялдамасына бағытталған № 118 маршрутты автобустан отырыңыз. Онда Мустафина көшесіне, 15-ші үйге дейін жаяу жүріңіз."
-            }
+          "howToGet": {
+            "title": "Бізге қалай жетуге болады",
+            "description": "Бізге келесі қоғамдық көлік маршруттарымен жетуге болады:",
+            "routes": "№ 43, 07, 1, 44, 29, 13, 28, 53, 44 автобустары"
           }
         },
         "stateProcurements": {
@@ -1115,41 +1095,21 @@ export default defineI18nConfig(() => ({
           "biblioteka": "Журнал \"Гигиена труда и медицинская экология\""
       },
       "location": {
-          "title": "Наше Расположение",
-          "subtitle": "Добро пожаловать в Национальный Центр Гигиены Труда и Профессиональных Заболеваний",
-          "infoTitle": "Информация о Центре",
-          "infoParagraph1": "Наш центр специализируется на исследованиях и разработках в области гигиены труда. Мы стремимся обеспечить безопасные и здоровые условия труда для всех работников.",
-          "infoParagraph2": "Ниже представлена информация о нашем местоположении и способах добраться до нас.",
-          "address": "Адрес",
-          "addressValue": "улица Мустафина, 15, Караганда.",
-          "phone": "Телефон",
-          "email": "Электронная почта",
-          "placemarkHint": "Наш Центр",
-          "placemarkBalloon": "Национальный Центр Гигиены Труда и Профессиональных Заболеваний",
-          "directions": {
-              "fromMikeuduka": {
-                  "title": "Из Майкудука",
-                  "byCar": "На автомобиле",
-                  "byCarDescription": "Следуйте по проспекту Республики в юго-западном направлении, затем поверните на улицу Мустафина. Продолжайте движение до дома № 15.",
-                  "byPublicTransport": "На общественном транспорте",
-                  "byPublicTransportDescription": "Сядьте на автобус маршрута № 40, следующего до остановки \"32-й квартал\". Оттуда пройдите пешком до улицы Мустафина, 15."
-              },
-              "fromYugoVostocha": {
-                  "title": "С Юго-Востока",
-                  "byCar": "На автомобиле",
-                  "byCarDescription": "Двигайтесь по улице Алиханова в северо-западном направлении, затем поверните на улицу Мустафина. Продолжайте движение до дома № 15.",
-                  "byPublicTransport": "На общественном транспорте",
-                  "byPublicTransportDescription": "Сядьте на автобус маршрута № 33 до остановки \"32-й квартал\". Оттуда пройдите пешком до улицы Мустафина, 15."
-              },
-              "fromCenter": {
-                  "title": "Из центра города",
-                  "byCar": "На автомобиле",
-                  "byCarDescription": "Следуйте по проспекту Бухар-жырау в восточном направлении, затем поверните на улицу Мустафина. Продолжайте движение до дома № 15.",
-                  "byPublicTransport": "На общественном транспорте",
-                  "byPublicTransportDescription": "Сядьте на автобус маршрута № 118 до остановки \"32-й квартал\". Оттуда пройдите пешком до улицы Мустафина, 15."
-              }
-          }
-      },
+    "title": "Наше Местонахождение",
+    "subtitle": "Добро пожаловать в Национальный Центр Гигиены Труда и Профессиональных Заболеваний",
+    "infoTitle": "Информация о Центре",
+    "infoParagraph1": "Наш центр специализируется на исследованиях и разработках в области гигиены труда. Мы стремимся обеспечить безопасные и здоровые условия труда для всех работников.",
+    "infoParagraph2": "Ниже представлена информация о нашем местоположении и о том, как до нас добраться.",
+    "address": "Адрес",
+    "addressValue": "ул. Мустафина, 15, Караганда.",
+    "placemarkHint": "Наш Центр",
+    "placemarkBalloon": "Национальный Центр Гигиены Труда и Профессиональных Заболеваний",
+    "howToGet": {
+      "title": "Как до нас добраться",
+      "description": "До нас можно доехать на следующих маршрутах общественного транспорта:",
+      "routes": "Автобусы № 43, 07, 1, 44, 29, 13, 28, 53, 44"
+    }
+  },
       "footer": {
           "quick_links": "Быстрые ссылки",
           "contact_info": "Контактная информация",
@@ -2275,41 +2235,21 @@ export default defineI18nConfig(() => ({
           "additionalResource3": "Frequently Asked Questions"
       },
       "location": {
-          "title": "Our Location",
-          "subtitle": "Welcome to the National Center for Occupational Hygiene and Professional Diseases",
-          "infoTitle": "About the Center",
-          "infoParagraph1": "Our center specializes in research and development in the field of occupational hygiene. We strive to ensure safe and healthy working conditions for all employees.",
-          "infoParagraph2": "Below is information about our location and how to reach us.",
-          "address": "Address",
-          "addressValue": "15 Mustafina Street, Karaganda.",
-          "phone": "Phone",
-          "email": "Email",
-          "placemarkHint": "Our Center",
-          "placemarkBalloon": "National Center for Occupational Hygiene and Professional Diseases",
-          "directions": {
-              "fromMikeuduka": {
-                  "title": "From Mikeuduka",
-                  "byCar": "By Car",
-                  "byCarDescription": "Follow Respubliki Avenue southwest, then turn onto Mustafina Street. Continue driving to house No. 15.",
-                  "byPublicTransport": "By Public Transport",
-                  "byPublicTransportDescription": "Take bus route No. 40 towards the \"32nd Quarter\" stop. From there, walk to Mustafina Street, 15."
-              },
-              "fromYugoVostocha": {
-                  "title": "From Southeast",
-                  "byCar": "By Car",
-                  "byCarDescription": "Drive along Alikhanova Street northwest, then turn onto Mustafina Street. Continue driving to house No. 15.",
-                  "byPublicTransport": "By Public Transport",
-                  "byPublicTransportDescription": "Take bus route No. 33 to the \"32nd Quarter\" stop. From there, walk to Mustafina Street, 15."
-              },
-              "fromCenter": {
-                  "title": "From City Center",
-                  "byCar": "By Car",
-                  "byCarDescription": "Follow Bukhar-Zhyrau Avenue east, then turn onto Mustafina Street. Continue driving to house No. 15.",
-                  "byPublicTransport": "By Public Transport",
-                  "byPublicTransportDescription": "Take bus route No. 118 to the \"32nd Quarter\" stop. From there, walk to Mustafina Street, 15."
-              }
-          }
-      },
+    "title": "Our Location",
+    "subtitle": "Welcome to the National Center for Labour Hygiene and Occupational Diseases",
+    "infoTitle": "About the Center",
+    "infoParagraph1": "Our center specializes in research and development in the field of labour hygiene. We strive to ensure safe and healthy working conditions for all employees.",
+    "infoParagraph2": "Below is information about our location and how to reach us.",
+    "address": "Address",
+    "addressValue": "Mustafin St., 15, Karaganda.",
+    "placemarkHint": "Our Center",
+    "placemarkBalloon": "National Center for Labour Hygiene and Occupational Diseases",
+    "howToGet": {
+      "title": "How to Reach Us",
+      "description": "You can reach us using the following public transport routes:",
+      "routes": "Buses No. 43, 07, 1, 44, 29, 13, 28, 53, 44"
+    }
+  },
       "history": {
           "title": "History of the Center",
           "introduction": "The National Center for Labor Hygiene and Occupational Diseases is a leading scientific institution in Kazakhstan, engaged in preserving the health of the working population and preventing occupational diseases. The Center conducts research activities in the field of occupational medicine and medical ecology, and coordinates the professional pathology service in Kazakhstan, providing specialized medical care to patients with occupational diseases.",

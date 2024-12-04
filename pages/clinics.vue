@@ -15,7 +15,7 @@
           </div>
           <div class="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
             <img
-              src=""
+              src="/images/302.jpg"
               :alt="$t('clinics.main.aboutUs.altText')"
               class="w-full md:w-1/2 rounded-lg shadow-md"
             />
@@ -35,14 +35,14 @@
             <h2 class="text-3xl font-bold text-blue-800 mb-4">{{ $t('clinics.main.departments.title') }}</h2>
             <p class="text-lg text-gray-700">{{ $t('clinics.main.departments.subtitle') }}</p>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             <div
               v-for="department in departments"
               :key="department.key"
               class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center"
             >
               <div class="mb-4">
-                <img :src="`/icons/${department.key}.svg`" :alt="department.title" class="w-16 h-16" />
+              <!--  <img :src="`/icons/${department.key}.jpg`" :alt="department.title" class="w-16 h-16" />-->
               </div>
               <h3 class="text-xl font-semibold text-blue-700 mb-2">{{ department.title }}</h3>
               <p class="text-gray-700 mb-2">{{ department.description }}</p>
@@ -55,7 +55,7 @@
         </div>
       </section>
   
-      <!-- Филиалы -->
+      <!--  
       <section class="bg-white py-12">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
@@ -63,7 +63,7 @@
             <p class="text-lg text-gray-700">{{ $t('clinics.main.branches.subtitle') }}</p>
           </div>
           <div class="space-y-8">
-            <!-- Филиал Восточно-Казахстанский -->
+             
             <div class="flex flex-col md:flex-row items-center">
               <img
                 src=""
@@ -85,7 +85,7 @@
               </div>
             </div>
   
-            <!-- Филиал Южно-Казахстанский -->
+        
             <div class="flex flex-col md:flex-row items-center">
               <img
                 src=""
@@ -107,7 +107,7 @@
               </div>
             </div>
   
-            <!-- Филиал Западно-Казахстанский -->
+            
             <div class="flex flex-col md:flex-row items-center">
               <img
                 src=""
@@ -130,8 +130,8 @@
             </div>
           </div>
         </div>
-      </section>
-  
+      </section>  -->
+    
       <!-- Отзывы -->
       <section class="bg-gray-100 py-12">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

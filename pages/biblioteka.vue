@@ -6,7 +6,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
         <!-- Логотип или изображение журнала -->
         <div class="flex-shrink-0 mb-4 md:mb-0">
-          <img src=" " alt="Обложка журнала" class="w-32 h-32 object-cover rounded-full mx-auto md:mx-0">
+          <img src="" alt="Обложка журнала" class="w-32 h-32 object-cover rounded-full mx-auto md:mx-0">
         </div>
         <!-- Название и описание -->
         <div class="md:ml-6 text-center md:text-left">
@@ -71,7 +71,7 @@
       <section id="home" class="bg-gray-50 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <!-- Фото журнала -->
-          <img src=" " alt="Обложка журнала" class="mx-auto mb-6 w-64 h-64 object-cover rounded-lg">
+          <img src="/jurnal/45.jpg" alt="Обложка журнала" class="mx-auto mb-6 w-64 h-84 object-cover rounded-lg">
           <!-- Описание -->
           <p class="text-lg text-gray-700 max-w-3xl mx-auto">
             Журнал «Гигиена труда и медицинская экология» - ежеквартальное научно-практическое издание, в котором публикуются оригинальные статьи о теоретических, практических, методологических разработках в области гигиены, экологии, профессиональной патологии, методов ранней диагностики и лечения, экспертизы ранней диагностики и трудоспособности, медицинской и трудовой реабилитации, обоснования нормативно-методических документов для практического здравоохранения (Казахстан).

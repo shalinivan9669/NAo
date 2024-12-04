@@ -133,7 +133,7 @@
         <p class="text-gray-700 leading-relaxed">
           {{ $t('price.contact.address') }}<br>
           {{ $t('price.contact.phone') }}<br>
-          {{ $t('price.contact.email') }}
+ 
         </p>
       </section>
     </main>

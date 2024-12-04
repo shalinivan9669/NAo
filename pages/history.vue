@@ -84,8 +84,8 @@
         {{ $t('history.clinic.paragraph1') }}
       </p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <img src="" :alt="$t('history.clinic.image1.alt')" class="w-full h-80 object-cover rounded-lg shadow-md">
-        <img src="" :alt="$t('history.clinic.image2.alt')" class="w-full h-80 object-cover rounded-lg shadow-md">
+        <img src="/images/25.jpg" :alt="$t('history.clinic.image1.alt')" class="w-full h-80 object-cover rounded-lg shadow-md">
+        <img src="/images/32.jpg" :alt="$t('history.clinic.image2.alt')" class="w-full h-80 object-cover rounded-lg shadow-md">
       </div>
       <p class="text-gray-800 mt-6">
         {{ $t('history.clinic.paragraph2') }}
@@ -116,27 +116,39 @@
       </ul>
       <!-- Инфографика -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <img src="" :alt="$t('history.scientificAchievements.image1.alt')" class="w-full h-60 object-cover rounded-lg shadow-md">
-        <img src="" :alt="$t('history.scientificAchievements.image2.alt')" class="w-full h-60 object-cover rounded-lg shadow-md">
+        <img src="/images/9.jpg" :alt="$t('history.scientificAchievements.image1.alt')" class="w-full h-92 object-cover rounded-lg shadow-md">
+        <img src="/images/26.jpg" :alt="$t('history.scientificAchievements.image2.alt')" class="w-full h-92 object-cover rounded-lg shadow-md">
       </div>
     </div>
 
-    <!-- Международное Сотрудничество -->
-    <div class="container mx-auto px-6 mb-12">
-      <h2 class="text-3xl font-semibold text-blue-800 mb-6">{{ $t('history.internationalCooperation.title') }}</h2>
-      <p class="text-gray-700 mb-6">
-        {{ $t('history.internationalCooperation.paragraph1') }}
-      </p>
-      <div class="flex flex-wrap gap-1">
-        <img src="/images/fr.jpg" :alt="$t('history.internationalCooperation.image1.alt')" class="w-80 h-80 object-contain">
-        <img src="/images/bg.jpg" :alt="$t('history.internationalCooperation.image2.alt')" class="w-80 h-80 object-contain">
-        <img src="/images/usa.jpg" :alt="$t('history.internationalCooperation.image3.alt')" class="w-80 h-80 object-contain">
-        <!-- Добавьте логотипы других партнеров аналогично -->
-      </div>
-      <p class="text-gray-700 mt-6">
-        {{ $t('history.internationalCooperation.paragraph2') }}
-      </p>
+   <!-- Международное Сотрудничество -->
+<div class="w-full max-w-8xl mx-auto px-6 mb-12">
+  <h2 class="text-3xl font-semibold text-blue-800 mb-6">{{ $t('history.internationalCooperation.title') }}</h2>
+  <p class="text-gray-700 mb-6">
+    {{ $t('history.internationalCooperation.paragraph1') }}
+  </p>
+
+  <!-- Измененный блок с изображениями -->
+  <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-8">
+    <div class="w-full h-full flex items-center justify-center">
+      <img src="/images/fr.jpg" :alt="$t('history.internationalCooperation.image1.alt')" class="object-contain w-full h-full rounded-lg shadow-md">
     </div>
+    <div class="w-full h-full flex items-center justify-center">
+      <img src="/images/bg.jpg" :alt="$t('history.internationalCooperation.image2.alt')" class="object-contain w-full h-full rounded-lg shadow-md">
+    </div>
+    <div class="w-full h-full flex items-center justify-center">
+      <img src="/images/usa.jpg" :alt="$t('history.internationalCooperation.image3.alt')" class="object-contain w-full h-full rounded-lg shadow-md">
+    </div>
+    <div class="w-full h-full flex items-center justify-center">
+      <img src="/images/34.jpg" :alt="$t('history.internationalCooperation.image3.alt')" class="object-contain w-full h-full rounded-lg shadow-md">
+    </div>
+    <!-- Добавьте логотипы других партнеров аналогично -->
+  </div>
+
+  <p class="text-gray-700 mt-6">
+    {{ $t('history.internationalCooperation.paragraph2') }}
+  </p>
+</div>
 
     <!-- Награды и Признание -->
     <div class="container mx-auto px-6 mb-12">
@@ -225,7 +237,7 @@ const leaders = computed(() => [
   {
     name: 'Хамитов Т.Н.',
     period: '2017-2018гг.',
-    image: '/images/leaders/khamitov.jpg',
+    image: '/images/khamitov.jpg',
   },
 ]);
 
@@ -287,11 +299,11 @@ const achievements = computed(() => [
 // Награды
 const awards = computed(() => [
   {
-    image: '',
+    image: '/images/13.jpg',
     title: t('history.awards.award1.title'),
   },
   {
-    image: '',
+    image: '/images/30.jpg',
     title: t('history.awards.award2.title'),
   },
   // Добавьте другие награды аналогично

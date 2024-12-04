@@ -18,7 +18,7 @@
             <p class="text-gray-700 mb-4">{{ t('lab.about.paragraph1') }}</p>
             <!-- Фото 1 -->
             <div class="flex justify-center my-8">
-              <img src=" " :alt="t('lab.about.photo1Alt')" class="w-full max-w-3xl">
+              <img src="/lab/1.jpg" :alt="t('lab.about.photo1Alt')" class="w-full max-w-3xl">
             </div>
             <p class="text-gray-700 mb-4">{{ t('lab.about.paragraph2') }}</p>
             <p class="text-gray-700">{{ t('lab.about.paragraph3') }}</p>
@@ -53,7 +53,7 @@
           <div class="mb-12">
             <!-- Фото 2 -->
             <div class="flex justify-center my-8">
-              <img src=" " :alt="t('lab.equipment.photo2Alt')" class="w-full max-w-3xl">
+              <img src="/lab/2.jpg " :alt="t('lab.equipment.photo2Alt')" class="w-full max-w-3xl">
             </div>
             <p class="text-gray-700 mb-4">{{ t('lab.equipment.description') }}</p>
             <p class="text-gray-700 mb-4">{{ t('lab.cooperation.intro') }}</p>
@@ -86,7 +86,7 @@
               {{ t('lab.contact.head') }}<br>
               {{ t('lab.contact.address') }}<br>
               {{ t('lab.contact.phone') }}<br>
-              {{ t('lab.contact.email') }}
+    
             </p>
           </div>
         </div>
