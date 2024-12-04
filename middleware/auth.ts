@@ -3,6 +3,11 @@ import { defineNuxtRouteMiddleware, navigateTo } from '#app';
 import { useStore } from 'vuex';
 
 export default defineNuxtRouteMiddleware((to, from) => {
+  // Исключаем маршруты, начинающиеся с /uploads/
+  if (to.path.startsWith('/uploads/')) {
+    return;
+  }
+
   const store = useStore();
 
   console.log('Middleware: Checking authentication');
