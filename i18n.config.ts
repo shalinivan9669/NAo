@@ -450,7 +450,7 @@ export default defineI18nConfig(() => ({
             "head": "Зертхана меңгерушісі м.а., PhD, Алексеев Алексей Владимирович.",
             "address": "Мекенжайы: Қарағанды қ., Мұстафин көш., 15, 117-ші кабинет.",
             "phone": "Тел.: 8(7212) 50-39-30 қосымша 1522.",
-            "email": "E-mail: alekseyev.ncgtpz@mail.ru, sotrnisgl@outlook.com"
+            
           }
         },
         "quality": {
@@ -1075,7 +1075,7 @@ export default defineI18nConfig(() => ({
               "head": "и.о. заведующего лабораторией, PhD, Алексеев Алексей Владимирович.",
               "address": "Адрес: г. Караганда, ул. Мустафина, 15, кабинет 117.",
               "phone": "Тел.: 8(7212) 50-39-30 вн. 1522.",
-              "email": "E-mail: alekseyev.ncgtpz@mail.ru, sotrnisgl@outlook.com"
+               
           }
       },
       "library": {
@@ -2208,7 +2208,7 @@ export default defineI18nConfig(() => ({
               "head": "Acting Head of the Laboratory, PhD, Alexey Alekseyev.",
               "address": "Address: Karaganda, Mustafin str., 15, office 117.",
               "phone": "Tel.: 8(7212) 50-39-30 ext. 1522.",
-              "email": "E-mail: alekseyev.ncgtpz@mail.ru, sotrnisgl@outlook.com"
+               
           }
       },
       "stateProcurements": {
