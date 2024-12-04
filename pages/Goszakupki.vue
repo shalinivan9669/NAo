@@ -180,7 +180,7 @@ const closeDetails = () => {
 onMounted(() => {
   fetchProcurements();
 });
-</script>
+</script> 
 
 <style scoped>
 /* Стилизация списка закупок */

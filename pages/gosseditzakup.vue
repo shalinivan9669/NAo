@@ -343,6 +343,7 @@ onMounted(() => {
 });
 </script>
 
+ 
 <style scoped>
 /* Стилизация таблицы и пагинации */
 .table {

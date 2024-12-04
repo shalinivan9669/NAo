@@ -31,7 +31,7 @@ const authenticate = (event: any) => {
 
 export default defineEventHandler(async (event) => {
   console.log('DELETE procurements API called');
-  
+
   const id = getRouterParam(event, 'id');
 
   if (!id || typeof id !== 'string') {
@@ -63,7 +63,7 @@ export default defineEventHandler(async (event) => {
   // Удаляем связанные файлы, если они существуют
   if (deletedProcurement.fileUrls && deletedProcurement.fileUrls.length > 0) {
     deletedProcurement.fileUrls.forEach((url) => {
-      const filePath = path.join(process.cwd(), 'public', url);
+      const filePath = path.join(process.cwd(), url);
       fs.unlink(filePath, (err) => {
         if (err) console.error('Error deleting file:', err);
       });
