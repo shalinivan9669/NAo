@@ -209,6 +209,95 @@ export default defineI18nConfig(() => ({
           "email": "Электронды пошта",
           "description": "ҚР Ұлттық еңбек гигиенасы және кәсіби аурулар орталығы. Біз жұмысшылардың денсаулығы мен қауіпсіздігін жақсартуға ұмтыламыз."
         },
+        "price": {
+    "header": {
+      "title": "Оқу қызметтері бойынша прайс-парақ",
+      "subtitle": "Сеніміңізге лайықты оқу!"
+    },
+    "footer": "«Еңбек гигиенасы және кәсіптік аурулар ұлттық орталығы» КеАҚ",
+    "priceList": {
+      "title": "Оқу бойынша ақылы қызметтер прайс-парағы"
+    },
+    "table": {
+      "section1": {
+        "title": "Жоғары білімді мамандардың сертификаттау курстарын және біліктілікті арттыру циклдерін өткізу",
+        "subsection1": {
+          "title": "Сертификаттау курстары күндізгі оқу түрі",
+          "row1": {
+            "number": "1",
+            "description": "30 кредит (900 сағат / 15 апта)",
+            "unit": "1 адам",
+            "price": "525 000 теңге"
+          }
+        },
+        "subsection2": {
+          "title": "Дәрігерлер үшін біліктілікті арттыру циклдері (күндізгі оқу түрі)",
+          "row1": {
+            "number": "1",
+            "description": "2 кредит (60 сағат / 1 апта)",
+            "unit": "1 адам",
+            "price": "35 000 теңге"
+          },
+          "row2": {
+            "number": "2",
+            "description": "4 кредит (120 сағат / 2 апта)",
+            "unit": "1 адам",
+            "price": "70 000 теңге"
+          },
+          "row3": {
+            "number": "3",
+            "description": "6 кредит (180 сағат / 3 апта)",
+            "unit": "1 адам",
+            "price": "105 000 теңге"
+          },
+          "row4": {
+            "number": "4",
+            "description": "8 кредит (240 сағат / 4 апта)",
+            "unit": "1 адам",
+            "price": "140 000 теңге"
+          }
+        }
+      },
+      "section2": {
+        "title": "Жоғары медициналық білімді мамандардың көшпелі оқыту семинарларын, мастер-класстарын және біліктілікті арттыру циклдерін өткізу",
+        "subsection1": {
+          "title": "Дәрігерлер үшін біліктілікті арттыру циклдері",
+          "row1": {
+            "number": "1",
+            "description": "2 кредит (60 сағат / 1 апта)",
+            "unit": "1 сағат",
+            "price": "80 000 теңге"
+          }
+        },
+        "subsection2": {
+          "title": "Орталық базасындағы оқыту семинары, мастер-класс",
+          "row1": {
+            "number": "1",
+            "description": "НЦГиТиЗ базасындағы оқыту семинары, мастер-класс, 10 адамға дейінгі топ (6 сағат / 1 күн)",
+            "unit": "1 адам",
+            "price": "6 000 теңге"
+          },
+          "row2": {
+            "number": "2",
+            "description": "Көшпелі оқыту семинары, мастер-класс, 15 және одан көп адамдық топ (6 сағат / 1 күн)",
+            "unit": "1 адам",
+            "price": "30 000 теңге"
+          }
+        }
+      }
+    },
+    "additionalInfo": {
+      "title": "Қосымша ақпарат",
+      "paragraph1": "Сертификаттау курстарын, біліктілікті арттыру циклдерін, семинарларды, мастер-кластарды, тренингтерді, тағылымдамаларды өткізу мерзімдері ұйымдардың өтінімдеріне байланысты өзгертілуі мүмкін.",
+      "paragraph2": "Пәнаралық мамандандыру үшін сертификаттау курсында оқуға резидентурадан кейінгі жоғары білімі бар қызметкерлер жіберіледі, №218 бұйрыққа сәйкес."
+    },
+    "contact": {
+      "title": "Байланыс ақпараттары",
+      "address": "Біз мына мекенжайда орналасқанбыз:\nҚарағанды қ., Мұстафин көш., 15",
+      "phone": "Телефон: +7 (7212) 56-52-63",
+      "email": "Электрондық пошта: m_otarbaeva@mail.ru, aigerabekmur@mail.ru"
+    }
+  },
         "hero": {
           "title": "Қазақстанның Еңбек Гигиенасы және Кәсіби Аурулардың Ұлттық Орталығы",
           "subtitle": "Біздің орталықтың миссиясы — еңбек етушілердің денсаулығы мен қауіпсіздігін қамтамасыз ету.",
@@ -1935,6 +2024,95 @@ export default defineI18nConfig(() => ({
             }
           }
         },
+        "price": {
+    "header": {
+      "title": "Price List for Educational Services",
+      "subtitle": "Education worthy of your trust!"
+    },
+    "footer": "NCJSC \"National Center for Labour Hygiene and Occupational Diseases\"",
+    "priceList": {
+      "title": "Price List for Paid Educational Services"
+    },
+    "table": {
+      "section1": {
+        "title": "Conducting Certification Courses and Advanced Training Cycles for Specialists with Higher Education",
+        "subsection1": {
+          "title": "Certification Courses Full-time Study",
+          "row1": {
+            "number": "1",
+            "description": "30 credits (900 hours / 15 weeks)",
+            "unit": "1 person",
+            "price": "525,000 tenge"
+          }
+        },
+        "subsection2": {
+          "title": "Advanced Training Cycles for Doctors (Full-time Study)",
+          "row1": {
+            "number": "1",
+            "description": "2 credits (60 hours / 1 week)",
+            "unit": "1 person",
+            "price": "35,000 tenge"
+          },
+          "row2": {
+            "number": "2",
+            "description": "4 credits (120 hours / 2 weeks)",
+            "unit": "1 person",
+            "price": "70,000 tenge"
+          },
+          "row3": {
+            "number": "3",
+            "description": "6 credits (180 hours / 3 weeks)",
+            "unit": "1 person",
+            "price": "105,000 tenge"
+          },
+          "row4": {
+            "number": "4",
+            "description": "8 credits (240 hours / 4 weeks)",
+            "unit": "1 person",
+            "price": "140,000 tenge"
+          }
+        }
+      },
+      "section2": {
+        "title": "Conducting Off-site Training Seminars, Master Classes, and Advanced Training Cycles for Specialists with Higher Medical Education",
+        "subsection1": {
+          "title": "Advanced Training Cycles for Doctors",
+          "row1": {
+            "number": "1",
+            "description": "2 credits (60 hours / 1 week)",
+            "unit": "1 hour",
+            "price": "80,000 tenge"
+          }
+        },
+        "subsection2": {
+          "title": "Training Seminar, Master Class at the Center's Base",
+          "row1": {
+            "number": "1",
+            "description": "Training seminar, master class at NCLHOD base for groups up to 10 people (6 hours / 1 day)",
+            "unit": "1 person",
+            "price": "6,000 tenge"
+          },
+          "row2": {
+            "number": "2",
+            "description": "Off-site training seminar, master class for groups of 15 or more people (6 hours / 1 day)",
+            "unit": "1 person",
+            "price": "30,000 tenge"
+          }
+        }
+      }
+    },
+    "additionalInfo": {
+      "title": "Additional Information",
+      "paragraph1": "The timing of certification courses, advanced training cycles, seminars, master classes, trainings, internships may be changed due to organizational requests.",
+      "paragraph2": "Employees with higher education after residency are allowed to study on the certification course for interdisciplinary specialization, according to order No. 218."
+    },
+    "contact": {
+      "title": "Contact Information",
+      "address": "We are located at:\nKaraganda, Mustafin str., 15",
+      "phone": "Phone: +7 (7212) 56-52-63",
+      "email": "Email: m_otarbaeva@mail.ru, aigerabekmur@mail.ru"
+    }
+  },
         "lab": {
     "header": {
       "title": "Scientific Research Sanitary and Hygienic Laboratory",
