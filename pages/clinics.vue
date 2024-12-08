@@ -35,7 +35,7 @@
             <h2 class="text-3xl font-bold text-blue-800 mb-4">{{ $t('clinics.main.departments.title') }}</h2>
             <p class="text-lg text-gray-700">{{ $t('clinics.main.departments.subtitle') }}</p>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div
               v-for="department in departments"
               :key="department.key"
@@ -227,12 +227,12 @@
       description: t('clinics.main.departments.functionalDiagnosis.description'),
       phone: '+7 (7212) 56 52 63',
     },
-    {
-      key: 'allergology',
-      title: t('clinics.main.departments.allergology.title'),
-      description: t('clinics.main.departments.allergology.description'),
-      phone: '+7 (7212) 56 53 10',
-    },
+   // {
+    //  key: 'allergology',
+    //  title: t('clinics.main.departments.allergology.title'),
+    //  description: t('clinics.main.departments.allergology.description'),
+     // phone: '+7 (7212) 56 53 10',
+    //},
      
   ]);
   

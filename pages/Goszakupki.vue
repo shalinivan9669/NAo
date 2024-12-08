@@ -95,12 +95,15 @@
             <div v-if="selectedProcurement.fileUrls && selectedProcurement.fileUrls.length > 0">
               <p class="font-semibold">Прикрепленные файлы:</p>
               <ul class="list-disc list-inside">
-                <li v-for="(fileUrl, index) in selectedProcurement.fileUrls" :key="index">
-                  <a :href="fileUrl" target="_blank" class="text-blue-600 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600">
-                    Файл {{ index + 1 }}
-                  </a>
-                </li>
-              </ul>
+  <li v-for="(fileUrl, index) in selectedProcurement.fileUrls" :key="index">
+    <a
+      :href="getDownloadUrl(fileUrl)"
+      class="text-blue-600 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600"
+    >
+      Файл {{ index + 1 }}
+    </a>
+  </li>
+</ul>
             </div>
           </div>
           <div class="mt-6 flex justify-end">
@@ -176,11 +179,17 @@ const closeDetails = () => {
   selectedProcurement.value = null;
 };
 
+//отдача фала
+const getDownloadUrl = (fileUrl: string) => {
+  const filename = fileUrl.split('/').pop(); // Получаем имя файла из URL
+  return `/api/downloads/${filename}`;
+};
+
 // Загрузка закупок при монтировании компонента
 onMounted(() => {
   fetchProcurements();
 });
-</script> 
+</script>
 
 <style scoped>
 /* Стилизация списка закупок */

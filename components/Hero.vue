@@ -12,7 +12,7 @@
         poster=" "
       >
         <source src=" " />
-        <source src="/videos/background.mp4" type="video/mp4" />
+        <source src="/videos/background.mov" type="video/mp4" />
         Ваш браузер не поддерживает воспроизведение видео.
       </video>
   

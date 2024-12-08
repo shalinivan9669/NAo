@@ -13,14 +13,7 @@ export default defineNuxtConfig({
     { src: '~/plugins/vue-echarts.js', mode: 'client' },
     { src: '~/plugins/vuex.ts' }, // Убедитесь, что этот плагин подключён
   ],
-  nitro: {
-    publicAssets: [
-      {
-        dir: 'uploads',
-        baseURL: '/uploads',
-      },
-    ],
-  },
+
   modules: ['@nuxtjs/i18n'],
 
   i18n: {

@@ -5,7 +5,6 @@ import type { Procurement } from '../../../types/types';
 import { v4 as uuidv4 } from 'uuid';
 import jwt from 'jsonwebtoken';
 import multer from 'multer';
-import path from 'path';
 
 const SECRET_KEY = process.env.JWT_SECRET || 'your_super_secret_key';
 
@@ -31,10 +30,7 @@ const authenticate = (event: any) => {
 
 // Настройка хранилища для файлов
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    const uploadPath = path.join(process.cwd(), 'uploads');
-    cb(null, uploadPath);
-  },
+  destination: './public/uploads/',
   filename: (req, file, cb) => {
     cb(null, `${uuidv4()}-${file.originalname}`);
   },

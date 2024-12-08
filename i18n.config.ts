@@ -1086,7 +1086,7 @@ export default defineI18nConfig(() => ({
           "clinics": "Клиника",
           "main_clinic": "Клиника",
           "education": "Повышение квалификации",
-          "programs": "Программы",
+          "programs": "Повышение квалификации",
           "prices": "Цены",
           "contacts": "Контакты",
           "contact_us": "Связаться с нами",

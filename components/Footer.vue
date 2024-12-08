@@ -42,19 +42,7 @@
     </svg>
   </a>
   
-  <!-- Twitter -->
-  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400" aria-label="Twitter">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M24 4.557a9.93 9.93 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724 9.864 9.864 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.38 4.482A13.94 13.94 0 0 1 1.671 3.149a4.916 4.916 0 0 0 1.523 6.574A4.897 4.897 0 0 1 .96 9.097v.062a4.916 4.916 0 0 0 3.946 4.814 4.902 4.902 0 0 1-2.224.084 4.918 4.918 0 0 0 4.59 3.417A9.867 9.867 0 0 1 0 19.54a13.94 13.94 0 0 0 7.548 2.213c9.056 0 14.01-7.496 14.01-13.986 0-.213-.005-.425-.014-.636A10.025 10.025 0 0 0 24 4.557z"/>
-    </svg>
-  </a>
-  
-  <!-- LinkedIn -->
-  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-700" aria-label="LinkedIn">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zM19 19h-3v-5.604c0-1.337-.025-3.07-1.872-3.07-1.872 0-2.158 1.46-2.158 2.97v5.703h-3v-10h2.881v1.367h.041c.401-.76 1.381-1.562 2.839-1.562 3.037 0 3.6 2 3.6 4.6v5.603z"/>
-    </svg>
-  </a>
+ 
   
   <!-- Instagram -->
   <a href="https://www.instagram.com/ncgtpz_kz/#" target="_blank" rel="noopener noreferrer" class="hover:text-pink-500" aria-label="Instagram">

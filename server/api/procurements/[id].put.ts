@@ -34,10 +34,7 @@ const authenticate = (event: any) => {
 
 // Настройка хранилища для файлов
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    const uploadPath = path.join(process.cwd(), 'uploads');
-    cb(null, uploadPath);
-  },
+  destination: './public/uploads/',
   filename: (req, file, cb) => {
     cb(null, `${uuidv4()}-${file.originalname}`);
   },
@@ -103,7 +100,7 @@ export default defineEventHandler(async (event) => {
     // Удаляем старые файлы
     const oldFileUrls = db.data.procurements[procurementIndex].fileUrls || [];
     oldFileUrls.forEach((url) => {
-      const filePath = path.join(process.cwd(), url);
+      const filePath = path.join(process.cwd(), 'public', url);
       fs.unlink(filePath, (err) => {
         if (err) console.error('Error deleting old file:', err);
       });
